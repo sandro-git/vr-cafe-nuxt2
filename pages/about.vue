@@ -6,6 +6,7 @@
     <nuxt-link to="/" class="bg-gray-400 text-white text-xl px-4 py-2 rounded-xl">
       Home Page
     </nuxt-link>
+    {{ $route.params.user }}
   </div>
 </template>
 
