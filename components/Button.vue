@@ -13,10 +13,8 @@ export default {
       required: true
     },
     path: {
-      type: Object,
-      default () {
-        return { name: '', params: { user: '1232' } }
-      }
+      type: String,
+      required: true
     }
   }
 }
