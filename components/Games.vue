@@ -18,7 +18,7 @@ export default {
         :asset-id="games.imageUrl.asset._ref "
         auto="format"
         height="250"
-        width="426"
+        width="450"
         style="height: 250px; width: 450px;"
       />
       <div class="p-5">
