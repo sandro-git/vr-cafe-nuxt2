@@ -55,7 +55,7 @@ export default {
   build: {
   },
   sanity: {
-    projectId: 'byaeh17d'
+    projectId: 'byaeh17d',
+    minimal: true
   }
-
 }

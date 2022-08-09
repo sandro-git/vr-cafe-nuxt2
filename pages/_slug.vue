@@ -6,7 +6,6 @@
     <nuxt-link to="/" class="bg-gray-400 text-white text-xl px-4 py-2 rounded-xl">
       Home Page
     </nuxt-link>
-    <!-- <p>{{ $data.result[0].imageUrl.asset._ref }}</p> -->
     <SanityImage
       class="w-1/2 h-1/2"
       :asset-id="$data.result[0].imageUrl.asset._ref "
