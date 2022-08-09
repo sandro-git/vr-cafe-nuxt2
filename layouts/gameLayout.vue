@@ -1,12 +1,11 @@
 <template>
   <div>
-    <p>Header principal</p>
-    <nuxt keep-alive />
+    <p>game header</p>
+    <nuxt-child />
   </div>
 </template>
-
 <script>
 export default {
-  name: 'DefaultLayout'
+  name: 'GameLayout'
 }
 </script>
