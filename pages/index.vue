@@ -1,5 +1,6 @@
 <template>
   <div class="flex flex-col items-center gap-5">
+    <LandingImage />
     <div v-for="game in games.result" :key="game._id" class="flex flex-col items-center ">
       <h1 class="text-4xl font-bold">
         {{ game.name }}
@@ -19,15 +20,17 @@
 </template>
 
 <script>
+import LandingImage from '~/components/landingImage.vue'
 export default {
   name: 'IndexPage',
+  components: { LandingImage },
   data () {
     return {
       games: null
     }
   },
   async fetch () {
-    this.games = await fetch('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "game"]{name,text,"imageUrl": image{asset},editor->{name},slug{current},text,players,difficulty}').then(res => res.json())
+    this.games = await fetch('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "game"]{name,text,"imageUrl": image{asset},editor->{name},slug{current}}').then(res => res.json())
   }
 }
 </script>
