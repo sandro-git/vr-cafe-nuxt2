@@ -1,19 +1,21 @@
 <template>
-  <div class="flex flex-col items-center">
-    <div v-for="game in games.result" :key="game._id" class="flex flex-col items-center">
-      <h1 class="text-4xl font-bold">
-        {{ game.name }}
-      </h1>
-      <nuxt-link :to="game.slug.current">
-        {{ game.slug.current }}
-      </nuxt-link>
+  <div>
+    <div class="flex flex-col items-center mt-20">
+      <div v-for="game in games.result" :key="game._id" class="flex flex-col items-center">
+        <h1 class="text-4xl font-bold">
+          {{ game.name }}
+        </h1>
+        <Card :game="game" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import Card from '~/components/Card.vue'
 export default {
   name: 'IndexPage',
+  components: { Card },
   data () {
     return {
       games: null

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col items-center mt-20">
     <h1 class="text-4xl font-bold">
       {{ $data.result[0].name }}
     </h1>
@@ -25,6 +25,7 @@ export default {
       .then(res => res.json())
     return game
   }
+
 }
 
 </script>
