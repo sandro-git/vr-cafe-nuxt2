@@ -74,6 +74,7 @@ export default {
   },
   ngrok: {
     // module options
-    authtoken: process.env.NGROK_AUTHTOKEN
+    authtoken: process.env.NGROK_AUTHTOKEN,
+    region: 'eu'
   }
 }
