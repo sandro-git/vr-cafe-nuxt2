@@ -4,6 +4,7 @@
       <div v-for="game in games.result" :key="game._id" class="flex flex-col items-center h-full w-full">
         <Cardv2 :game="game" />
       </div>
+
     </div>
   </div>
 </template>
@@ -13,13 +14,17 @@ import Cardv2 from '~/components/Cardv2.vue'
 export default {
   name: 'IndexPage',
   components: { Cardv2 },
+
   data () {
     return {
-      games: null
+      path: { name: 'about' },
+      gamePath: { name: '', params: { user: '1232' } }
     }
   },
-  async fetch () {
-    this.games = await fetch('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "game"]{name,text,"imageUrl": image{asset},editor->{name},slug{current}}').then(res => res.json())
+  computed: {
+    gameProp () {
+      return { name: '', params: this.games }
+    }
   }
 }
 </script>
