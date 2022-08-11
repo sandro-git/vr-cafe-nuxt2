@@ -10,17 +10,16 @@
     />
     <Tarif />
     <Services />
-    <div class="grid grid-cols-1 grid-row-3 place-self-auto xl:grid-cols-4 gap-4 items-center mt-20 ">
-      <div v-for="game in games.result" :key="game._id" class="flex flex-col items-center h-full w-full">
-        <Card :game="game" />
-      </div>
-    </div>
+    <Titles title="ESCAPE GAME VR" subtitle="UBISOFT" />
+    <Card :games="games" />
   </div>
 </template>
 
 <script>
+import Titles from '~/components/Titles.vue'
 export default {
   name: 'IndexPage',
+  components: { Titles },
   data () {
     return {
       games: null,
