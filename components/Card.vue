@@ -21,7 +21,7 @@
 </template>
 <script>
 export default {
-  name: 'GameCardv2',
+  name: 'GameCard',
   props: {
     game: {
       default: null,

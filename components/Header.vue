@@ -8,7 +8,8 @@
       <a href="/" class="flex justify-center lg:col-span-1 lg:h-full h-2/3">
         <span class="sr-only">Logo</span>
         <nuxt-img
-          src="VRCAFE_LOGO_OK.webp"
+          provider="sanity"
+          :src="logo.imageId.asset._ref"
           alt="logo vr café"
           class="h-full"
           sizes="xs:100vw"
@@ -74,6 +75,13 @@
 
 <script>
 export default {
-  name: 'HeaderApp'
+  name: 'HeaderApp',
+  props: {
+    logo: {
+      type: Object,
+      required: true,
+      default: null
+    }
+  }
 }
 </script>
