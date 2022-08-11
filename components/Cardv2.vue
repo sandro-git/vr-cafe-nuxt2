@@ -1,10 +1,11 @@
 <template>
   <!-- component -->
   <div class="bg-gray-600 max-w-sm overflow-hidden rounded-xl shadow-md duration-200 hover:scale-105 hover:shadow-xl w-full h-full">
-    <sanityImage
+    <nuxt-img
+      provider="sanity"
+      :src="game.imageUrl.asset._ref"
+      placeholder
       class="h-52 w-full"
-      :asset-id="game.imageUrl.asset._ref "
-      auto="format"
     />
     <div class="p-5">
       <p class="text-medium mb-5 text-gray-200">

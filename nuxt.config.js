@@ -42,8 +42,8 @@ export default {
     '@nuxtjs/tailwindcss',
     // sanity module
     '@nuxtjs/sanity/module',
-    // vuetify
-    '@nuxtjs/vuetify'
+    // nuxt-image
+    '@nuxt/image'
   ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -64,5 +64,10 @@ export default {
     projectId: 'byaeh17d',
     minimal: true
   },
-  tailwindcss: {}
+  tailwindcss: {},
+  image: {
+    sanity: {
+      projectId: 'byaeh17d'
+    }
+  }
 }
