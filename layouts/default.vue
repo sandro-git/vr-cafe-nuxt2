@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Header principal</p>
+    <Header />
     <nuxt keep-alive />
   </div>
 </template>

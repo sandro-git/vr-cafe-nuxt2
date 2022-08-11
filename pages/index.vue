@@ -1,24 +1,20 @@
 <template>
-  <div class="flex flex-col items-center">
-    <h1 class="text-4xl font-bold">
-      Home Page
-    </h1>
-    <Button text="About" :path="path" />
-    <div v-for="game in games.result" :key="game._id" class="flex flex-col">
-      <Button :text="game.name" />
-      <p>{{ game.slug.current }}</p>
+  <div>
+    <div class="grid grid-cols-1 grid-row-3 place-self-auto xl:grid-cols-4 gap-4 items-center mt-20 ">
+      <div v-for="game in games.result" :key="game._id" class="flex flex-col items-center h-full w-full">
+        <Cardv2 :game="game" />
+      </div>
+
     </div>
   </div>
 </template>
 
 <script>
-import LandingImage from '~/components/landingImage.vue'
+import Cardv2 from '~/components/Cardv2.vue'
 export default {
   name: 'IndexPage',
-  async asyncData ({ $axios }) {
-    const games = await $axios.$get('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "game"]{name,_id,slug{current}}')
-    return { games }
-  },
+  components: { Cardv2 },
+
   data () {
     return {
       path: { name: 'about' },

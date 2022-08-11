@@ -6,7 +6,11 @@ export default {
   head: {
     title: 'vr-cafe-nuxt2',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'fr',
+      class: 'dark'
+    },
+    bodyAttrs: {
+      class: 'bg-black text-gray-50'
     },
     meta: [
       { charset: 'utf-8' },
@@ -37,7 +41,11 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     // sanity module
-    '@nuxtjs/sanity/module'
+    '@nuxtjs/sanity/module',
+    // nuxt-image
+    '@nuxt/image',
+    // ngrok
+    '@nuxtjs/ngrok'
   ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -55,7 +63,18 @@ export default {
   build: {
   },
   sanity: {
-    projectId: 'byaeh17d'
+    projectId: 'byaeh17d',
+    minimal: true
+  },
+  tailwindcss: {},
+  image: {
+    sanity: {
+      projectId: 'byaeh17d'
+    }
+  },
+  ngrok: {
+    // module options
+    authtoken: process.env.NGROK_AUTHTOKEN,
+    region: 'eu'
   }
-
 }
