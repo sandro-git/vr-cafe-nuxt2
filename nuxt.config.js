@@ -6,11 +6,10 @@ export default {
   head: {
     title: 'vr-cafe-nuxt2',
     htmlAttrs: {
-      lang: 'fr',
-      class: 'dark'
+      lang: 'fr'
     },
     bodyAttrs: {
-      class: 'bg-black text-gray-50'
+      class: 'bg-gray-900 text-gray-50'
     },
     meta: [
       { charset: 'utf-8' },
