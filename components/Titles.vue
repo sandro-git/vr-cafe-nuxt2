@@ -17,8 +17,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: '',
-      required: true
+      default: ''
     },
     subtitle: {
       type: String,

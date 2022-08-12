@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-1 grid-row-3 place-self-auto xl:grid-cols-4 gap-4 items-center mt-20 ">
-    <div v-for="game in gamesApp" :key="game._id" class="flex flex-col items-center h-full w-full">
+    <div v-for="game in games" :key="game._id" class="flex flex-col items-center h-full w-full">
       <div class="bg-gray-600 max-w-sm overflow-hidden rounded-xl shadow-md duration-200 hover:scale-105 hover:shadow-xl w-full h-full">
         <nuxt-img
           provider="sanity"
@@ -29,13 +29,8 @@ export default {
   props: {
     games: {
       default: null,
-      type: Object,
+      type: Array,
       required: true
-    }
-  },
-  computed: {
-    gamesApp () {
-      return this.games.result
     }
   }
 }

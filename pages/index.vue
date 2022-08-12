@@ -11,7 +11,9 @@
     <Tarif />
     <Services />
     <Titles title="ESCAPE GAME VR" subtitle="UBISOFT" />
-    <Card :games="games" />
+    <Card :games="Ubisoft" />
+    <Titles subtitle="ARVI VR" />
+    <Card :games="Arvi" />
   </div>
 </template>
 
@@ -36,6 +38,12 @@ export default {
     },
     LandingImage () {
       return this.pages.result.find(el => el.name === 'Landing Image')
+    },
+    Ubisoft () {
+      return this.games.result.filter(el => el.editor.name === 'Ubisoft')
+    },
+    Arvi () {
+      return this.games.result.filter(el => el.editor.name === 'Arvi')
     }
   }
 }
