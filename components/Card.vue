@@ -12,11 +12,13 @@
           <p class="text-medium mb-5 text-gray-200">
             {{ game.name }}
           </p>
-          <nuxt-link :to="game.slug.current">
-            <button class="w-full rounded-md bg-indigo-600  py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75">
-              Plus
-            </button>
-          </nuxt-link>
+          <div :v-if="game.slug === null">
+            <nuxt-link :to="game.slug.current">
+              <button class="w-full rounded-md bg-indigo-600  py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75">
+                En savoir plus
+              </button>
+            </nuxt-link>
+          </div>
         </div>
       </div>
     </div>

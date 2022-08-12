@@ -14,10 +14,13 @@
     <Card :games="Ubisoft" />
     <Titles title="ESCAPE GAME VR (EXCLU)" subtitle="ARVI VR" />
     <Card :games="Arvi" />
-    <Titles title="EXPERIENCE ARCADE VR" subtitle="WANADEV" />
+    <Titles title="ARCADE VR" subtitle="WANADEV" />
     <Card :games="Wanadev" />
     <Titles subtitle="SYNTHESYS" />
     <Card :games="Synthesys" />
+    <Titles subtitle="PARTENAIRES" />
+    <!-- <Card :games="editors.result" /> -->
+    <pre>{{ EditorsResult }}</pre>
   </div>
 </template>
 
@@ -29,12 +32,14 @@ export default {
   data () {
     return {
       games: null,
-      pages: null
+      pages: null,
+      editors: null
     }
   },
   async fetch () {
     this.games = await fetch('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "game"]{name,text,"imageUrl": image{asset},editor->{name},slug{current}}').then(res => res.json())
     this.pages = await fetch('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "Pages"]{name,"imageId":image{asset}}').then(res => res.json())
+    this.editors = await fetch('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "editors"]{name,"imageUrl":image{asset},_id}').then(res => res.json())
   },
   computed: {
     Logo () {
@@ -54,6 +59,9 @@ export default {
     },
     Synthesys () {
       return this.games.result.filter(el => el.editor.name === 'Synthesys')
+    },
+    EditorsResult () {
+      return this.editors.result
     }
   }
 }

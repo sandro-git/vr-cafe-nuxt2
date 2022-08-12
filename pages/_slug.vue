@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center mt-20">
+  <div class="flex flex-col items-center mt-10 gap-4">
     <h1 class="text-4xl font-bold">
       {{ $data.result[0].name }}
     </h1>
