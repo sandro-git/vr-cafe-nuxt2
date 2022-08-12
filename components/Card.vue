@@ -8,22 +8,19 @@
           placeholder
           class="h-52 w-full"
         />
-        <div class="p-5">
-          <p class="text-medium mb-5 text-gray-200">
+        <div v-if="editor" class="p-5">
+          <p class="text-2xl text-center mb-5 text-gray-200">
             {{ game.name }}
           </p>
-          <div :v-if="game.slug === null">
-            <nuxt-link :to="game.slug.current">
-              <button class="w-full rounded-md bg-indigo-600  py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75">
-                En savoir plus
-              </button>
-            </nuxt-link>
-          </div>
+          <nuxt-link :to="game.slug.current">
+            <button class="w-full rounded-md bg-indigo-600  py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75">
+              En savoir plus
+            </button>
+          </nuxt-link>
         </div>
       </div>
     </div>
   </div>
-  <!-- component -->
 </template>
 <script>
 export default {
@@ -32,6 +29,11 @@ export default {
     games: {
       default: null,
       type: Array,
+      required: true
+    },
+    editor: {
+      default: true,
+      type: Boolean,
       required: true
     }
   }

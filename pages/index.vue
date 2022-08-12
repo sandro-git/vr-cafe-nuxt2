@@ -19,8 +19,7 @@
     <Titles subtitle="SYNTHESYS" />
     <Card :games="Synthesys" />
     <Titles subtitle="PARTENAIRES" />
-    <!-- <Card :games="editors.result" /> -->
-    <pre>{{ EditorsResult }}</pre>
+    <Card :games="EditorsResult" :editor="false" />
   </div>
 </template>
 
@@ -39,7 +38,7 @@ export default {
   async fetch () {
     this.games = await fetch('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "game"]{name,text,"imageUrl": image{asset},editor->{name},slug{current}}').then(res => res.json())
     this.pages = await fetch('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "Pages"]{name,"imageId":image{asset}}').then(res => res.json())
-    this.editors = await fetch('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "editors"]{name,"imageUrl":image{asset},_id}').then(res => res.json())
+    this.editors = await fetch('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "editors"]{name,"imageUrl":image{asset},_id,slug}').then(res => res.json())
   },
   computed: {
     Logo () {
