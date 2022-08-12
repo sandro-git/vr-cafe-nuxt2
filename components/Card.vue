@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-1 grid-row-3 place-self-auto xl:grid-cols-4 gap-4 items-center mt-20 ">
+  <div class="grid grid-cols-1 grid-row-3 place-self-auto xl:grid-cols-4 gap-4 items-center p-10 ">
     <div v-for="game in games" :key="game._id" class="flex flex-col items-center h-full w-full">
       <div class="bg-gray-600 max-w-sm overflow-hidden rounded-xl shadow-md duration-200 hover:scale-105 hover:shadow-xl w-full h-full">
         <nuxt-img

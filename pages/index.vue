@@ -12,8 +12,12 @@
     <Services />
     <Titles title="ESCAPE GAME VR" subtitle="UBISOFT" />
     <Card :games="Ubisoft" />
-    <Titles subtitle="ARVI VR" />
+    <Titles title="ESCAPE GAME VR (EXCLU)" subtitle="ARVI VR" />
     <Card :games="Arvi" />
+    <Titles title="EXPERIENCE ARCADE VR" subtitle="WANADEV" />
+    <Card :games="Wanadev" />
+    <Titles subtitle="SYNTHESYS" />
+    <Card :games="Synthesys" />
   </div>
 </template>
 
@@ -44,6 +48,12 @@ export default {
     },
     Arvi () {
       return this.games.result.filter(el => el.editor.name === 'Arvi')
+    },
+    Wanadev () {
+      return this.games.result.filter(el => el.editor.name === 'Wanadev')
+    },
+    Synthesys () {
+      return this.games.result.filter(el => el.editor.name === 'Synthesys')
     }
   }
 }
