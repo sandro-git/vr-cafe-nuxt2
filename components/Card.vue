@@ -1,7 +1,7 @@
 <template>
   <div class="grid grid-cols-1 grid-row-3 place-self-auto xl:grid-cols-4 gap-4 items-center p-10 ">
     <div v-for="game in games" :key="game._id" class="flex flex-col items-center h-full w-full">
-      <div class="bg-gray-600 max-w-sm overflow-hidden rounded-xl shadow-md duration-200 hover:scale-105 hover:shadow-xl w-full h-full">
+      <div class="bg-gray-400 max-w-sm overflow-hidden rounded-xl shadow-md duration-200 hover:scale-105 hover:shadow-xl w-full h-full">
         <nuxt-img
           provider="sanity"
           :src="game.imageUrl.asset._ref"
@@ -9,7 +9,7 @@
           class="h-52 w-full"
         />
         <div v-if="editor" class="p-5">
-          <p class="text-2xl text-center mb-5 text-gray-200">
+          <p class="text-2xl text-center mb-5 text-gray-50">
             {{ game.name }}
           </p>
           <nuxt-link :to="game.slug.current">
