@@ -28,13 +28,11 @@ export default {
   props: {
     games: {
       default: null,
-      type: Array,
-      required: true
+      type: Array
     },
     editor: {
       default: true,
-      type: Boolean,
-      required: true
+      type: Boolean
     }
   }
 }

@@ -20,6 +20,7 @@
     <Card :games="Synthesys" />
     <Titles subtitle="PARTENAIRES" />
     <Card :games="EditorsResult" :editor="false" />
+    <Footer />
   </div>
 </template>
 
