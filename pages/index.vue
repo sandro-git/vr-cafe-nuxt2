@@ -16,6 +16,8 @@
     <Card :games="Arvi" />
     <Titles title="ARCADE VR" subtitle="WANADEV" />
     <Card :games="Wanadev" />
+    <Titles subtitle="LCDL VR" />
+    <Card :games="Ldlc" />
     <Titles subtitle="SYNTHESYS" />
     <Card :games="Synthesys" />
     <Titles subtitle="PARTENAIRES" />
@@ -56,6 +58,9 @@ export default {
     },
     Wanadev () {
       return this.games.result.filter(el => el.editor.name === 'Wanadev')
+    },
+    Ldlc () {
+      return this.games.result.filter(el => el.editor.name === 'Ldlc')
     },
     Synthesys () {
       return this.games.result.filter(el => el.editor.name === 'Synthesys')
