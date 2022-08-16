@@ -6,14 +6,12 @@
         <p
           class="mt-2 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl"
         >
-          NOS SERVICES
+          {{ services.titre }}
         </p>
         <p
           class="mt-3 max-w-4xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl"
         >
-          Notre bar-café, notre terrasse extérieure et nos 220 m2 nous
-          permettent d'acceuillir tout au long de l'année vos évènemens de
-          groupe . Nous organisons vos évènement sur mesure selon votre budget.
+          {{ services.text }}
         </p>
       </div>
     </div>
@@ -120,7 +118,7 @@
                       <div class="rounded-lg shadow-md">
                         <a
                           href="#"
-                          class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50"
+                          class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-indigo-700 hover:bg-gray-50"
                           aria-describedby="tier-hobby"
                         >
                           Nous contacter
@@ -275,7 +273,7 @@
                     <div class="rounded-lg shadow-md">
                       <a
                         href="#footer"
-                        class="block w-full text-center rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-indigo-700"
+                        class="block w-full text-center rounded-lg border border-transparent bg-indigo-700 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-indigo-700"
                         aria-describedby="tier-growth"
                       >
                         Nous Contacter
@@ -382,7 +380,7 @@
                       <div class="rounded-lg shadow-md">
                         <a
                           href="reservation-simply.html"
-                          class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50"
+                          class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-indigo-700 hover:bg-gray-50"
                           aria-describedby="tier-scale"
                         >
                           Réserver
@@ -402,6 +400,17 @@
 
 <script>
 export default {
-  name: 'BaseServices'
+  name: 'BaseServices',
+  props: {
+    pages: {
+      type: Object,
+      default: null
+    }
+  },
+  computed: {
+    services () {
+      return this.pages.result.find(el => el.name === 'Services')
+    }
+  }
 }
 </script>

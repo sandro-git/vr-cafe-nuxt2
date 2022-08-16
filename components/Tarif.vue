@@ -59,7 +59,7 @@
                         </span>
                       </div>
                       <h3
-                        class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-indigo-100 text-indigo-600 w-1/2 justify-center mt-6"
+                        class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-indigo-100 text-indigo-700 w-1/2 justify-center mt-6"
                       >
                         30 min
                       </h3>
@@ -145,7 +145,7 @@
                       <div class="rounded-lg shadow-md">
                         <a
                           href="reservation-simply.html"
-                          class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50"
+                          class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-indigo-700 hover:bg-gray-50"
                           aria-describedby="tier-hobby"
                         >
                           Réservez
@@ -167,7 +167,7 @@
                 <div class="absolute inset-x-0 top-0 transform translate-y-px">
                   <div class="flex justify-center transform -translate-y-1/2">
                     <span
-                      class="inline-flex rounded-full bg-indigo-600 px-4 py-1 text-sm font-semibold tracking-wider uppercase text-white"
+                      class="inline-flex rounded-full bg-indigo-700 px-4 py-1 text-sm font-semibold tracking-wider uppercase text-white"
                     >
                       Le plus populaire
                     </span>
@@ -203,9 +203,9 @@
                     </div>
                     <h3
                       id="tier-standard"
-                      class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-indigo-100 text-indigo-600 w-1/2 justify-center mt-6"
+                      class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-indigo-100 text-indigo-700 w-1/2 justify-center mt-6"
                     >
-                      1 h
+                      1 Heure
                     </h3>
                   </div>
                 </div>
@@ -337,7 +337,7 @@
                     <div class="rounded-lg shadow-md">
                       <a
                         href="reservation-simply.html"
-                        class="block w-full text-center rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-indigo-700"
+                        class="block w-full text-center rounded-lg border border-transparent bg-indigo-700 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-indigo-700"
                         aria-describedby="tier-growth"
                       >
                         Réserver
@@ -360,7 +360,7 @@
                         id="tier-scale"
                         class="text-center text-2xl font-medium text-gray-900"
                       >
-                        Culture VR
+                        Simulateur <br>de conduite VR
                       </h3>
                       <div class="mt-4 flex items-center justify-center">
                         <span
@@ -368,10 +368,8 @@
                         >
                           <span
                             class="self-center pr-2 text-xl font-medium text-gray-500"
-                          >
-                            A partir de :
-                          </span>
-                          <span class="font-extrabold"> 5 </span>
+                          />
+                          <span class="font-extrabold"> 20 </span>
                           <span class="mt-2 mr-2 text-4xl font-medium">
                             €
                           </span>
@@ -381,9 +379,9 @@
                         </span>
                       </div>
                       <h3
-                        class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-indigo-100 text-indigo-600 w-2/3 justify-center mt-6"
+                        class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-indigo-100 text-indigo-700 w-2/3 justify-center mt-6"
                       >
-                        à partir de 5 min
+                        30 min
                       </h3>
                     </div>
                   </div>
@@ -467,7 +465,7 @@
                       <div class="rounded-lg shadow-md">
                         <a
                           href="reservation-simply.html"
-                          class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50"
+                          class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-indigo-700 hover:bg-gray-50"
                           aria-describedby="tier-scale"
                         >
                           Réserver
