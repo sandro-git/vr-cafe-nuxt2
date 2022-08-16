@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-1 grid-row-3 place-self-auto xl:grid-cols-4 gap-4 items-center p-10  ">
-    <div v-for="game in games" :key="game._id" class="flex flex-col items-center h-full w-full border-2 rounded-xl border-gray-50">
+    <div v-for="game in games" :key="game._id" class="flex flex-col items-center h-full w-full border-2 rounded-xl border-pink-500">
       <div class="bg-gray-400 max-w-sm overflow-hidden rounded-xl shadow-md duration-200 hover:scale-105 hover:shadow-xl w-full h-full">
         <nuxt-img
           provider="sanity"
@@ -13,7 +13,7 @@
             {{ game.name }}
           </p>
           <nuxt-link :to="game.slug.current">
-            <button class="w-full rounded-md bg-indigo-600  py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75">
+            <button class="w-full rounded-md bg-indigo-700  py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75">
               En savoir plus
             </button>
           </nuxt-link>

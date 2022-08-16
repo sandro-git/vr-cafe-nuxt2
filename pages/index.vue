@@ -9,7 +9,7 @@
       sizes="xs:100vw lg:100vw xl:100vw"
     />
     <Tarif />
-    <Services />
+    <Services :pages="pages" />
     <Titles title="ESCAPE GAME VR" subtitle="UBISOFT" />
     <Card :games="Ubisoft" />
     <Titles title="ESCAPE GAME VR (EXCLU)" subtitle="ARVI VR" />
@@ -38,7 +38,7 @@ export default {
   },
   async fetch () {
     this.games = await fetch('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "game"]{name,text,"imageUrl": image{asset},editor->{name},slug{current}}').then(res => res.json())
-    this.pages = await fetch('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "Pages"]{name,"imageId":image{asset}}').then(res => res.json())
+    this.pages = await fetch('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "Pages"]{name,"imageId":image{asset},titre,text}').then(res => res.json())
     this.editors = await fetch('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "editors"]{name,"imageUrl":image{asset},_id,slug}').then(res => res.json())
   },
   computed: {
