@@ -1,9 +1,10 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div>
-    <div v-for="event in login.result" :key="event.id">
+    <div v-for="event in login" :key="event.id">
       <h1>{{ event.name }}</h1>
       <p v-html="event.description" />
+      <!-- <nuxt-img :src="event.picture" /> -->
     </div>
   </div>
 </template>
@@ -13,7 +14,6 @@ export default {
   name: 'ReservationPage',
   data () {
     return {
-      data: null,
       login: null
     }
   },
