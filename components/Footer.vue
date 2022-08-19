@@ -24,12 +24,12 @@ export default {
         social: [
           {
             name: 'Facebook',
-            href: '#',
+            href: 'https://www.facebook.com/vrcafe66/',
             icon: 'fab fa-facebook'
           },
           {
             name: 'Instagram',
-            href: '#',
+            href: 'https://www.instagram.com/vrcafe_66/',
             icon: 'fab fa-instagram'
           }
 
