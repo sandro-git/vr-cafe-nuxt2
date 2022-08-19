@@ -1,10 +1,11 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div>
-    <div v-for="event in login" :key="event.id">
+    <!-- <pre>{{ login.result }}</pre> -->
+    <div v-for="event in login.result" :key="event.id">
       <h1>{{ event.name }}</h1>
       <p v-html="event.description" />
-      <!-- <nuxt-img :src="event.picture" /> -->
+      <nuxt-img :src="event.picture" />
     </div>
   </div>
 </template>
@@ -20,6 +21,7 @@ export default {
   async fetch () {
     const URL = 'https://user-api.simplybook.me/login'
     const baseURL = 'https://user-api.simplybook.me/'
+
     const response = await fetch(URL, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
