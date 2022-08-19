@@ -36,38 +36,31 @@
         </div>
         <!-- navigation mobile -->
         <div id="navbar-sticky" :class="{'hidden': !showMenu, 'flex': showMenu}" class="md:justify-between justify-center items-center w-full md:flex md:w-auto md:order-1 bg-gray-900">
-          <ul class="flex flex-col p-4 mt-4 rounded-lg borde md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
-            <li>
-              <nuxt-link key="Solutions" to="/" class="block py-2 pr-4 pl-3 text-base lg:text-2xl font-medium text-white hover:text-indigo-50" aria-current="page">
-                Accueil
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link key="Pricing" to="#price" class="block py-2 pr-4 pl-3 text-base lg:text-2xl font-medium text-white hover:text-indigo-50">
-                Tarifs
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link key="Services" to="#services" class="block py-2 pr-4 pl-3 text-base lg:text-2xl font-medium text-white hover:text-indigo-50">
-                Services
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link key="Company" to="#escape" class="block py-2 pr-4 pl-3 text-base lg:text-2xl font-medium text-white hover:text-indigo-50">
-                Escape
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link key="Arcade" to="#arcade" class="block py-2 pr-4 pl-3 text-base lg:text-2xl font-medium text-white hover:text-indigo-50">
-                Arcade
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link key="Docs" to="#culture" class="block py-2 pr-4 pl-3 text-base lg:text-2xl font-medium text-white hover:text-indigo-50">
-                Culture
-              </nuxt-link>
-            </li>
-          </ul>
+          <div class="flex flex-col p-4 mt-4 rounded-lg borde md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+            <nuxt-link key="Solutions" to="/" class="block py-2 pr-4 pl-3 text-base lg:text-2xl font-medium text-white hover:text-indigo-50" aria-current="page">
+              Accueil
+            </nuxt-link>
+
+            <nuxt-link key="Pricing" to="#price" class="block py-2 pr-4 pl-3 text-base lg:text-2xl font-medium text-white hover:text-indigo-50">
+              Tarifs
+            </nuxt-link>
+
+            <nuxt-link key="Services" to="#services" class="block py-2 pr-4 pl-3 text-base lg:text-2xl font-medium text-white hover:text-indigo-50">
+              Services
+            </nuxt-link>
+
+            <nuxt-link key="Company" to="#escape" class="block py-2 pr-4 pl-3 text-base lg:text-2xl font-medium text-white hover:text-indigo-50">
+              Escape
+            </nuxt-link>
+
+            <nuxt-link key="Arcade" to="#arcade" class="block py-2 pr-4 pl-3 text-base lg:text-2xl font-medium text-white hover:text-indigo-50">
+              Arcade
+            </nuxt-link>
+
+            <nuxt-link key="Docs" to="#culture" class="block py-2 pr-4 pl-3 text-base lg:text-2xl font-medium text-white hover:text-indigo-50">
+              Culture
+            </nuxt-link>
+          </div>
         </div>
       </div>
     </nav>
