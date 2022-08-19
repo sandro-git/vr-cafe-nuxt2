@@ -2,13 +2,6 @@
 <template>
   <footer class="bg-gray-900">
     <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-      <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
-        <div v-for="item in navigation.main" :key="item.name" class="px-5 py-2">
-          <a :href="item.href" class="text-base text-gray-100 hover:text-gray-50">
-            {{ item.name }}
-          </a>
-        </div>
-      </nav>
       <div class="mt-8 flex justify-center space-x-6">
         <a v-for="item in navigation.social" :key="item.name" :href="item.href" class="text-gray-400 hover:text-gray-500">
           <span class="sr-only">{{ item.name }}</span>
@@ -28,13 +21,6 @@ export default {
   data () {
     return {
       navigation: {
-        main: [
-          { name: 'Acceuil', href: '#' },
-          { name: 'Tarifs', href: '#' },
-          { name: 'Escape', href: '#' },
-          { name: 'Arcade', href: '#' },
-          { name: 'Culture', href: '#' }
-        ],
         social: [
           {
             name: 'Facebook',

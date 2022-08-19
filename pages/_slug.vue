@@ -11,7 +11,11 @@
       :asset-id="$data.result[0].imageUrl.asset._ref "
       auto="format"
     />
-    {{ $data.result[0].text }}
+    <div class="px-5">
+      <p>{{ $data.result[0].text }}</p>
+      <!-- <p>{{ $data.result[0].player }} | </p> -->
+      <!-- <pre>{{ $data.result[0] }}</pre> -->
+    </div>
   </div>
 </template>
 
