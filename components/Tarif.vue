@@ -6,17 +6,12 @@
         <p
           class="mt-2 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl"
         >
-          NOS TARIFS
+          {{ tarifs.titre }}
         </p>
         <p
           class="mt-3 max-w-4xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl"
         >
-          Une activité adapté à partir <span class="uppercase"> de 8 ans</span>.
-          Nous proposons des
-          <span class="uppercase">expériences</span>
-          variées en Réalité Virtuelle. Un catalogue de Jeux évolutif tous au
-          long de l'année. <br>Entre amis, en famille, entre collaborateur,
-          tentez l'expérience VR Café.
+          {{ tarifs.text }}
         </p>
       </div>
     </div>
@@ -485,7 +480,18 @@
 
 <script>
 export default {
-  name: 'BasePrices'
+  name: 'BasePrices',
+  props: {
+    pages: {
+      type: Object,
+      default: null
+    }
+  },
+  computed: {
+    tarifs () {
+      return this.pages.result.find(el => el.name === 'Tarifs')
+    }
+  }
 }
 </script>
 

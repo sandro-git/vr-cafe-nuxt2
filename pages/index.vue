@@ -8,7 +8,7 @@
       alt="VR headset"
       sizes="xs:100vw lg:100vw xl:100vw"
     />
-    <Tarif />
+    <Tarif :pages="pages" />
     <Services :pages="pages" />
     <Titles title="ESCAPE GAME VR" subtitle="UBISOFT" />
     <Card :games="Ubisoft" />
