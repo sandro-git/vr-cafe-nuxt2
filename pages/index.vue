@@ -60,7 +60,7 @@ export default {
       return this.games.result.filter(el => el.editor.name === 'Wanadev')
     },
     Ldlc () {
-      return this.games.result.filter(el => el.editor.name === 'Ldlc')
+      return this.games.result.filter(el => el.editor.name === 'LDLC Studio VR')
     },
     Synthesys () {
       return this.games.result.filter(el => el.editor.name === 'Synthesys')
