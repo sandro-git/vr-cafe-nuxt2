@@ -33,7 +33,7 @@
                         id="tier-hobby"
                         class="text-center text-2xl font-medium text-gray-900"
                       >
-                        Arcade VR
+                        Arcade VR 🕹️
                       </h3>
                       <div class="mt-4 flex items-center justify-center">
                         <span
@@ -355,7 +355,7 @@
                         id="tier-scale"
                         class="text-center text-2xl font-medium text-gray-900"
                       >
-                        Simulateur <br>de conduite VR
+                        Simulateur <br>de conduite VR 🏎️
                       </h3>
                       <div class="mt-4 flex items-center justify-center">
                         <span
@@ -404,7 +404,7 @@
                           </svg>
                         </div>
                         <p class="ml-3 text-base font-medium text-gray-500">
-                          La culture autrement.
+                          La Formule 1 autrement
                         </p>
                       </li>
 
@@ -428,7 +428,7 @@
                           </svg>
                         </div>
                         <p class="ml-3 text-base font-medium text-gray-500">
-                          L'oeuvre de Monet
+                          Battez Max Verstappen
                         </p>
                       </li>
 
@@ -452,7 +452,7 @@
                           </svg>
                         </div>
                         <p class="ml-3 text-base font-medium text-gray-500">
-                          Une femme préhistorique
+                          Une vitesse impressionante
                         </p>
                       </li>
                     </ul>

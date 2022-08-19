@@ -33,7 +33,7 @@
                         id="tier-hobby"
                         class="text-center text-2xl font-bold text-gray-900"
                       >
-                        <span class="uppercase">Anniversaires </span><br>
+                        <span class="uppercase">Anniversaires 🎂</span><br>
                         EVJ - EVF
                       </h3>
                     </div>
