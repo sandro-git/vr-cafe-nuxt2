@@ -12,8 +12,9 @@
       auto="format"
     />
     <div class="px-5">
+      <p>{{ $data.result[0].player }} | {{ $data.result[0].difficulty }}</p>
+      <br>
       <p>{{ $data.result[0].text }}</p>
-      <!-- <p>{{ $data.result[0].player }} | </p> -->
       <!-- <pre>{{ $data.result[0] }}</pre> -->
     </div>
   </div>
