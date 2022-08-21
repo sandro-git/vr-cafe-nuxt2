@@ -18,7 +18,7 @@
       <div class="text-right pr-8 lg:hidden flex justify-end " @click="toggle">
         <i class="fas fa-bars h-8 w-8" />
       </div>
-      <div :class="{hidden:!isActive}" class="lg:hidden fixed top-0 w-screen h-screen z-50 bg-gray-900">
+      <div :class="{hidden:isActive}" class="lg:hidden w-screen absolute top-0 h-screen z-50 bg-gray-900">
         <div class="grid grid-cols-2 grid-rows-1 col-start-2  my-4 h-12 justify-items-end pr-8" @click="toggle">
           <i class="fas fa-bars h-8 w-8 col-start-2 self-center" />
         </div>
@@ -154,7 +154,7 @@ export default {
   },
   data () {
     return {
-      isActive: false
+      isActive: true
     }
   },
   methods: {
