@@ -1,9 +1,12 @@
 <template>
   <div>
-    <Header :logo="Logo" />
+    <Header
+      :logo="Logo"
+      class="md:pb-40"
+    />
     <nuxt-img
       provider="sanity"
-      class="text-center"
+
       :src="LandingImage.imageId.asset._ref"
       alt="VR headset"
       sizes="xs:100vw lg:100vw xl:100vw"

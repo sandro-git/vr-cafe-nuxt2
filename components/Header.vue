@@ -23,55 +23,8 @@
           <i class="fas fa-bars h-8 w-8 col-start-2 self-center" />
         </div>
         <!-- navigation mobile -->
-        <div class="mb-4 py-4 flex flex-col gap-14 items-center">
-          <!-- acceuil -->
-          <nuxt-link
-            key="Index"
-            to="/"
-            class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
-          >
-            Accueil
-          </nuxt-link>
-          <!-- tarifs -->
-          <nuxt-link
-            key="Pricing"
-            to="#price"
-            class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
-          >
-            Tarifs
-          </nuxt-link>
-          <!-- services -->
-          <nuxt-link
-            key="Services"
-            to="#services"
-            class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
-          >
-            Services
-          </nuxt-link>
-          <!-- escape -->
-          <nuxt-link
-            key="Company"
-            to="#escape"
-            class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
-          >
-            Escape
-          </nuxt-link>
-          <!-- arcade -->
-          <nuxt-link
-            key="Arcade"
-            to="#arcade"
-            class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
-          >
-            Arcade
-          </nuxt-link>
-          <!-- culture -->
-          <nuxt-link
-            key="Culture"
-            to="#culture"
-            class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
-          >
-            Culture
-          </nuxt-link>
+        <div v-for="lien in liens" :key="lien.texte" class="mb-4 py-4 flex flex-col gap-14 items-center">
+          <Lien :texte="lien.texte" :lien="lien.lien" @toggle="toggle" />
         </div>
       </div>
       <!-- bouton réserver -->
@@ -85,57 +38,17 @@
       </div>
       <!-- navigation -->
       <div
-        class="hidden col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-1 lg:flex flex-col items-center"
+        class="hidden col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-1 lg:flex flex-row gap-4 items-center"
       >
-        <div class="mb-4 py-4 flex space-x-6">
-          <!-- acceuil -->
-          <nuxt-link
+        <div v-for="lien in liens" :key="lien.texte" class="mb-4 py-4 flex space-x-6">
+          <a
             key="Index"
-            to="/"
+            :href="lien.lien"
             class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
+            @click="toggle"
           >
-            Accueil
-          </nuxt-link>
-          <!-- tarifs -->
-          <nuxt-link
-            key="Pricing"
-            to="#price"
-            class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
-          >
-            Tarifs
-          </nuxt-link>
-          <!-- services -->
-          <nuxt-link
-            key="Services"
-            to="#services"
-            class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
-          >
-            Services
-          </nuxt-link>
-          <!-- escape -->
-          <nuxt-link
-            key="Company"
-            to="#escape"
-            class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
-          >
-            Escape
-          </nuxt-link>
-          <!-- arcade -->
-          <nuxt-link
-            key="Arcade"
-            to="#arcade"
-            class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
-          >
-            Arcade
-          </nuxt-link>
-          <!-- culture -->
-          <nuxt-link
-            key="Culture"
-            to="#culture"
-            class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
-          >
-            Culture
-          </nuxt-link>
+            {{ lien.texte }}
+          </a>
         </div>
       </div>
     </nav>
@@ -143,6 +56,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'HeaderApp',
   props: {
@@ -154,7 +68,29 @@ export default {
   },
   data () {
     return {
-      isActive: true
+      isActive: true,
+      liens: [
+        {
+          texte: 'Accueil',
+          lien: '/'
+        },
+        {
+          texte: 'Tarifs',
+          lien: '#price'
+        },
+        {
+          texte: 'Services',
+          lien: '#services'
+        },
+        {
+          texte: 'Escape',
+          lien: '#escape'
+        },
+        {
+          texte: 'Arcade',
+          lien: '#arcade'
+        }
+      ]
     }
   },
   methods: {
