@@ -43,8 +43,6 @@ export default {
     '@nuxtjs/tailwindcss',
     // sanity module
     '@nuxtjs/sanity/module',
-    // nuxt-image
-    '@nuxt/image',
     // ngrok
     '@nuxtjs/ngrok'
   ],
