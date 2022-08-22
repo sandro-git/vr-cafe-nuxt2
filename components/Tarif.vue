@@ -6,17 +6,12 @@
         <p
           class="mt-2 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl"
         >
-          NOS TARIFS
+          {{ tarifs.titre }}
         </p>
         <p
           class="mt-3 max-w-4xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl"
         >
-          Une activité adapté à partir <span class="uppercase"> de 8 ans</span>.
-          Nous proposons des
-          <span class="uppercase">expériences</span>
-          variées en Réalité Virtuelle. Un catalogue de Jeux évolutif tous au
-          long de l'année. <br>Entre amis, en famille, entre collaborateur,
-          tentez l'expérience VR Café.
+          {{ tarifs.text }}
         </p>
       </div>
     </div>
@@ -38,7 +33,7 @@
                         id="tier-hobby"
                         class="text-center text-2xl font-medium text-gray-900"
                       >
-                        Arcade VR
+                        Arcade VR 🕹️
                       </h3>
                       <div class="mt-4 flex items-center justify-center">
                         <span
@@ -360,7 +355,7 @@
                         id="tier-scale"
                         class="text-center text-2xl font-medium text-gray-900"
                       >
-                        Simulateur <br>de conduite VR
+                        Simulateur <br>de conduite VR 🏎️
                       </h3>
                       <div class="mt-4 flex items-center justify-center">
                         <span
@@ -409,7 +404,7 @@
                           </svg>
                         </div>
                         <p class="ml-3 text-base font-medium text-gray-500">
-                          La culture autrement.
+                          La Formule 1 autrement
                         </p>
                       </li>
 
@@ -433,7 +428,7 @@
                           </svg>
                         </div>
                         <p class="ml-3 text-base font-medium text-gray-500">
-                          L'oeuvre de Monet
+                          Battez Max Verstappen
                         </p>
                       </li>
 
@@ -457,7 +452,7 @@
                           </svg>
                         </div>
                         <p class="ml-3 text-base font-medium text-gray-500">
-                          Une femme préhistorique
+                          Une vitesse impressionante
                         </p>
                       </li>
                     </ul>
@@ -485,7 +480,18 @@
 
 <script>
 export default {
-  name: 'BasePrices'
+  name: 'BasePrices',
+  props: {
+    pages: {
+      type: Object,
+      default: null
+    }
+  },
+  computed: {
+    tarifs () {
+      return this.pages.result.find(el => el.name === 'Tarifs')
+    }
+  }
 }
 </script>
 

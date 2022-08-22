@@ -11,8 +11,9 @@
       :asset-id="$data.result[0].imageUrl.asset._ref "
       auto="format"
     />
-    <div class="px-5">
-      <p>{{ $data.result[0].player }} | {{ $data.result[0].difficulty }}</p>
+    <div class="px-5 text-center">
+      <!-- <pre>{{ $data.result[0] }} </pre> -->
+      <p>{{ $data.result[0].players }} | {{ $data.result[0].difficulty }}</p>
       <br>
       <p>{{ $data.result[0].text }}</p>
       <!-- <pre>{{ $data.result[0] }}</pre> -->
@@ -26,7 +27,7 @@ export default {
   // try fetch
   name: 'SlugPage',
   async asyncData ({ params }) {
-    const game = await fetch(`https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[slug.current == "${params.slug}"]{name,text,'imageUrl':image{asset},slug{current}}`)
+    const game = await fetch(`https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[slug.current == "${params.slug}"]{name,text,'imageUrl':image{asset},slug{current},players,difficulty}`)
       .then(res => res.json())
     return game
   }
