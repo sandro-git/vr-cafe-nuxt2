@@ -76,19 +76,19 @@ export default {
         },
         {
           texte: 'Tarifs',
-          lien: '#price'
+          lien: '/#price'
         },
         {
           texte: 'Services',
-          lien: '#services'
+          lien: '/#services'
         },
         {
           texte: 'Escape',
-          lien: '#escape'
+          lien: '/#escape'
         },
         {
           texte: 'Arcade',
-          lien: '#arcade'
+          lien: '/#arcade'
         }
       ]
     }
