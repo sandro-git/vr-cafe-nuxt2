@@ -1,5 +1,11 @@
+import axios from 'axios'
+
+const dynamicRoutes = async () => {
+  const res = await axios.get('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "game"]{slug{current}}')
+  return res.data.result.map(el => el.slug.current)
+}
+
 export default {
-  ssr: false,
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -30,7 +36,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // font-awesome
-    '@plugins/font-awesome'
+    '@plugins/font-awesome',
+    '@plugins/preview.client'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -70,6 +77,7 @@ export default {
   },
   tailwindcss: {},
   image: {
+    provider: 'sanity',
     sanity: {
       projectId: 'byaeh17d'
     }
@@ -78,5 +86,8 @@ export default {
     // module options
     authtoken: process.env.NGROK_AUTHTOKEN,
     region: 'eu'
+  },
+  generate: {
+    routes: dynamicRoutes
   }
 }
