@@ -1,6 +1,5 @@
 <template>
   <div>
-    <pre />
     <Header :logo="Logo" />
     <nuxt-img
       provider="sanity"
@@ -20,47 +19,36 @@
     <Titles subtitle="SYNTHESYS" />
     <Card :games="Synthesys" />
     <Titles subtitle="PARTENAIRES" />
-    <!-- <Card :games="EditorsResult" :editor="false" /> -->
+    <Card :games="getEditors" :editor="false" />
     <Footer />
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'IndexPage',
-  async asyncData ({ $axios }) {
-    const games = await $axios.$get('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "game"]{name,text,"imageUrl": image{asset},editor->{name},slug{current}}')
-
-    const pages = await $axios.$get('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "Pages"]{name,"imageId":image{asset},titre,text}')
-
-    const editors = await $axios.$get('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "editors"]{name,"imageUrl":image{asset},_id,slug}')
-
-    return { games, pages, editors }
-  },
-
   computed: {
-
+    ...mapGetters(['getGames', 'getPages', 'getEditors']),
     Logo () {
-      return this.pages.result.find(el => el.name === 'Logo')
+      return this.getPages.find(el => el.name === 'Logo')
     },
     LandingImage () {
-      return this.pages.result.find(el => el.name === 'Landing Image')
+      return this.getPages.find(el => el.name === 'Landing Image')
     },
     Ubisoft () {
-      return this.games.result.filter(el => el.editor.name === 'Ubisoft')
+      return this.getGames.filter(el => el.editor.name === 'Ubisoft')
     },
     Arvi () {
-      return this.games.result.filter(el => el.editor.name === 'Arvi')
+      return this.getGames.filter(el => el.editor.name === 'Arvi')
     },
     Wanadev () {
-      return this.games.result.filter(el => el.editor.name === 'Wanadev')
+      return this.getGames.filter(el => el.editor.name === 'Wanadev')
     },
     Synthesys () {
-      return this.games.result.filter(el => el.editor.name === 'Synthesys')
-    },
-    EditorsResult () {
-      return this.editors.result
+      return this.getGames.filter(el => el.editor.name === 'Synthesys')
     }
   }
+
 }
 </script>
