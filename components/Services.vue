@@ -6,12 +6,12 @@
         <p
           class="mt-2 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl"
         >
-          {{ services.titre }}
+          NOS SERVICES
         </p>
         <p
           class="mt-3 max-w-4xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl"
         >
-          {{ services.text }}
+          Notre bar-café, notre terrasse extérieure et nos 220 m2 nous permettent d'acceuillir tout au long de l'année vos évènemens de groupe . Nous organisons vos évènement sur mesure selon votre budget.
         </p>
       </div>
     </div>
