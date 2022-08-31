@@ -5,16 +5,16 @@
       aria-label="Top"
     >
       <!-- logo -->
-      <a href="/" class="flex justify-center lg:col-span-1 lg:h-full h-2/3">
+      <nuxt-link to="/" class="flex justify-center lg:col-span-1 lg:h-full h-2/3">
         <span class="sr-only">Logo</span>
         <nuxt-img
           provider="sanity"
-          :src="logo.imageId.asset._ref"
+          :src="Logo.imageId.asset._ref"
           alt="logo vr café"
           class="h-full"
           sizes="xs:100vw"
         />
-      </a>
+      </nuxt-link>
       <!-- bouton réserver -->
       <div class="flex justify-center lg:col-start-3">
         <a
@@ -29,43 +29,12 @@
         <div class="mb-4 py-4 flex space-x-6">
           <!-- acceuil -->
           <nuxt-link
-            key="Solutions"
-            to="/"
+            v-for="item in menu"
+            :key="item"
+            :to="item.link"
             class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
           >
-            Accueil
-          </nuxt-link>
-          <!-- tarifs -->
-          <nuxt-link
-            key="Pricing"
-            to="#price"
-            class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
-          >
-            Tarifs
-          </nuxt-link>
-          <!-- escape -->
-          <nuxt-link
-            key="Company"
-            to="#escape"
-            class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
-          >
-            Escape
-          </nuxt-link>
-          <!-- arcade -->
-          <nuxt-link
-            key="Docs"
-            to="#arcade"
-            class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
-          >
-            Arcade
-          </nuxt-link>
-          <!-- culture -->
-          <nuxt-link
-            key="Docs"
-            to="#culture"
-            class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
-          >
-            Culture
+            {{ item.titre }}
           </nuxt-link>
         </div>
       </div>
@@ -74,13 +43,42 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'HeaderApp',
-  props: {
-    logo: {
-      type: Object,
-      required: true,
-      default: null
+  data () {
+    return {
+      menu:
+      [{
+        titre: 'Acceuil',
+        link: '/'
+      },
+      {
+        titre: 'Tarifs',
+        link: '#price'
+      },
+      {
+        titre: 'Services',
+        link: '#services'
+      },
+      {
+        titre: 'Escape',
+        link: '#escape'
+      },
+      {
+        titre: 'Arcade',
+        link: '#arcade'
+      },
+      {
+        titre: 'Culture',
+        link: '#culture'
+      }]
+    }
+  },
+  computed: {
+    ...mapGetters(['getPages']),
+    Logo () {
+      return this.getPages.find(el => el.name === 'Logo')
     }
   }
 }

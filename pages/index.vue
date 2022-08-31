@@ -1,13 +1,7 @@
 <template>
   <div>
-    <Header :logo="Logo" />
-    <nuxt-img
-      provider="sanity"
-      class="text-center"
-      :src="LandingImage.imageId.asset._ref"
-      alt="VR headset"
-      sizes="xs:100vw lg:100vw xl:100vw"
-    />
+    <Header />
+    <LandingImage />
     <Tarif />
     <Services />
     <Titles title="ESCAPE GAME VR" subtitle="UBISOFT" />
@@ -29,13 +23,7 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'IndexPage',
   computed: {
-    ...mapGetters(['getGames', 'getPages', 'getEditors']),
-    Logo () {
-      return this.getPages.find(el => el.name === 'Logo')
-    },
-    LandingImage () {
-      return this.getPages.find(el => el.name === 'Landing Image')
-    },
+    ...mapGetters(['getGames', 'getEditors']),
     Ubisoft () {
       return this.getGames.filter(el => el.editor.name === 'Ubisoft')
     },
