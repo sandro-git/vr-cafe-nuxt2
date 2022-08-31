@@ -52,9 +52,8 @@ export default {
     // sanity module
     '@nuxtjs/sanity/module',
     // @nuxt/image
-    '@nuxt/image',
+    '@nuxt/image'
     // ngrok
-    '@nuxtjs/ngrok'
   ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -81,11 +80,6 @@ export default {
     sanity: {
       projectId: 'byaeh17d'
     }
-  },
-  ngrok: {
-    // module options
-    authtoken: process.env.NGROK_AUTHTOKEN,
-    region: 'eu'
   },
   generate: {
     routes: dynamicRoutes
