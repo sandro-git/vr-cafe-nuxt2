@@ -30,7 +30,7 @@
           <!-- acceuil -->
           <nuxt-link
             v-for="item in menu"
-            :key="item"
+            :key="item.id"
             :to="item.link"
             class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
           >
