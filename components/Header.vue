@@ -5,29 +5,19 @@
       aria-label="Top"
     >
       <!-- logo -->
-      <a href="/" class="flex justify-center lg:col-span-1 h-full">
+      <nuxt-link to="/" class="flex justify-center lg:col-span-1 h-full">
         <span class="sr-only">Logo</span>
         <nuxt-img
           provider="sanity"
-          :src="logo.imageId.asset._ref"
+          :src="Logo.imageId.asset._ref"
           alt="logo vr café"
           class="h-full"
           sizes="xs:100vw"
         />
-      </a>
+      </nuxt-link>
       <div class="text-right pr-8 lg:hidden flex justify-end " @click="toggle">
         <i class="fas fa-bars h-8 w-8" />
       </div>
-      <div :class="{hidden:isActive}" class="lg:hidden w-screen absolute top-0 h-screen z-50 bg-gray-900">
-        <div class="grid grid-cols-2 grid-rows-1 col-start-2  my-4 h-12 justify-items-end pr-8" @click="toggle">
-          <i class="fas fa-bars h-8 w-8 col-start-2 self-center" />
-        </div>
-        <!-- navigation mobile -->
-        <div v-for="lien in liens" :key="lien.texte" class="mb-4 py-4 flex flex-col gap-14 items-center">
-          <Lien :texte="lien.texte" :lien="lien.lien" @toggle="toggle" />
-        </div>
-      </div>
-      <!-- bouton réserver -->
       <div class=" hidden lg:flex justify-center lg:col-start-3">
         <nuxt-link
           to="/reservation"
@@ -51,21 +41,56 @@
           </a>
         </div>
       </div>
+      <!-- fin nav fermée -->
+    </nav>
+    <!-- nav ouverte -->
+    <nav :class="{hidden:isActive}" class="lg:hidden w-screen absolute top-0 h-screen z-40 bg-gray-900 grid grid-cols-2 grid-rows-6 ">
+      <div class="grid grid-cols-2 grid-rows-1 col-span-2  my-4 h-12 justify-items-center w-full">
+        <!-- logo -->
+        <nuxt-link to="/" class="flex justify-center lg:col-span-1 h-full ">
+          <span class="sr-only">Logo</span>
+          <nuxt-img
+            provider="sanity"
+            :src="Logo.imageId.asset._ref"
+            alt="logo vr café"
+            class="h-full"
+            sizes="xs:100vw"
+          />
+        </nuxt-link>
+        <!-- hamburger icon -->
+        <div class="w-full h-full pr-8 lg:hidden flex justify-end " @click="toggle">
+          <i class="fas fa-bars h-8 w-8 z-50 place-self-center" />
+        </div>
+      </div>
+      <!-- liens -->
+      <div v-for="lien in liens" :key="lien.texte" class="mb-4 py-4 flex flex-col items-center">
+        <nuxt-link
+          key="Index"
+          :to="lien.lien"
+          class="text-2xl font-medium text-white hover:text-indigo-50"
+          @click.native="toggle"
+        >
+          {{ lien.texte }}
+        </nuxt-link>
+      </div>
+      <div class="lg:hidden py-4 flex flex-col text-center px-8">
+        <nuxt-link
+          to="/reservation"
+          class="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base lg:text-2xl font-medium text-indigo-700 hover:bg-indigo-50"
+        >
+          Réserver
+        </nuxt-link>
+      </div>
+      <!--  -->
+      <!-- bouton réserver -->
     </nav>
   </header>
 </template>
 
 <script>
-
+import { mapGetters } from 'vuex'
 export default {
   name: 'HeaderApp',
-  props: {
-    logo: {
-      type: Object,
-      required: true,
-      default: null
-    }
-  },
   data () {
     return {
       isActive: true,
@@ -76,21 +101,27 @@ export default {
         },
         {
           texte: 'Tarifs',
-          lien: '/#price'
+          lien: '#price'
         },
         {
           texte: 'Services',
-          lien: '/#services'
+          lien: '#services'
         },
         {
           texte: 'Escape',
-          lien: '/#escape'
+          lien: '#escape'
         },
         {
           texte: 'Arcade',
-          lien: '/#arcade'
+          lien: '#arcade'
         }
       ]
+    }
+  },
+  computed: {
+    ...mapGetters(['getPages']),
+    Logo () {
+      return this.getPages.find(el => el.name === 'Logo')
     }
   },
   methods: {

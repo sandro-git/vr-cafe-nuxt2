@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-900 grid grid-cols-1 grid-rows-2 ">
+  <div :id="id" class="bg-gray-900 grid grid-cols-1 grid-rows-2 ">
     <h2 class="sm:text-4xl lg:text-5xl text-3xl font-extrabold text-white text-center px-4 pt-6 ">
       <span class="">{{ title }}</span>
     </h2>
@@ -20,6 +20,10 @@ export default {
       default: ''
     },
     subtitle: {
+      type: String,
+      default: ''
+    },
+    id: {
       type: String,
       default: ''
     }

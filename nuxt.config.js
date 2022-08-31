@@ -1,10 +1,3 @@
-import axios from 'axios'
-
-const dynamicRoutes = async () => {
-  const res = await axios.get('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "game"]{slug{current}}')
-  return res.data.result.map(el => el.slug.current)
-}
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -76,12 +69,8 @@ export default {
   },
   tailwindcss: {},
   image: {
-    provider: 'sanity',
     sanity: {
       projectId: 'byaeh17d'
     }
-  },
-  generate: {
-    routes: dynamicRoutes
   }
 }
