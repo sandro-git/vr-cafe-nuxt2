@@ -18,6 +18,29 @@
       <div class="text-right pr-8 lg:hidden flex justify-end " @click="toggle">
         <i class="fas fa-bars h-8 w-8" />
       </div>
+      <div class=" hidden lg:flex justify-center lg:col-start-3">
+        <nuxt-link
+          to="/reservation"
+          class="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base lg:text-2xl font-medium text-indigo-700 hover:bg-indigo-50"
+        >
+          Réserver
+        </nuxt-link>
+      </div>
+      <!-- navigation -->
+      <div
+        class="hidden col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-1 lg:flex flex-row gap-4 items-center"
+      >
+        <div v-for="lien in liens" :key="lien.texte" class="mb-4 py-4 flex space-x-6">
+          <a
+            key="Index"
+            :href="lien.lien"
+            class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
+            @click="toggle"
+          >
+            {{ lien.texte }}
+          </a>
+        </div>
+      </div>
       <!-- fin nav fermée -->
     </nav>
     <!-- nav ouverte -->
@@ -60,29 +83,6 @@
       </div>
       <!--  -->
       <!-- bouton réserver -->
-      <div class=" hidden lg:flex justify-center lg:col-start-3">
-        <nuxt-link
-          to="/reservation"
-          class="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base lg:text-2xl font-medium text-indigo-700 hover:bg-indigo-50"
-        >
-          Réserver
-        </nuxt-link>
-      </div>
-      <!-- navigation -->
-      <div
-        class="hidden col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-1 lg:flex flex-row gap-4 items-center"
-      >
-        <div v-for="lien in liens" :key="lien.texte" class="mb-4 py-4 flex space-x-6">
-          <a
-            key="Index"
-            :href="lien.lien"
-            class="text-base lg:text-2xl font-medium text-white hover:text-indigo-50"
-            @click="toggle"
-          >
-            {{ lien.texte }}
-          </a>
-        </div>
-      </div>
     </nav>
   </header>
 </template>
