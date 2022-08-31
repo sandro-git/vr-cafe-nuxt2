@@ -6,12 +6,10 @@
     <nuxt-link to="/" class="bg-gray-400 text-white text-xl px-4 py-2 rounded-xl">
       Home Page
     </nuxt-link>
-    <iframe
-      class="w-5/6 h-96 xl:w-1/2 border-2 border-pink-500"
-      :src="`https://www.youtube.com/embed/${game.youtube}`"
-      title="YouTube video player"
-      frameborder="0"
-      allowfullscreen
+    <SanityImage
+      class="w-1/2 h-1/2"
+      :asset-id="game.imageUrl.asset._ref "
+      auto="format"
     />
     {{ game.text }}
   </div>
@@ -22,7 +20,7 @@
 export default {
   name: 'SlugPage',
   async asyncData ({ $axios, params }) {
-    const rawGame = await $axios.$get(`https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[slug.current == "${params.slug}"]{name,text,'imageUrl':image{asset},slug{current},youtube}`)
+    const rawGame = await $axios.$get(`https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[slug.current == "${params.slug}"]{name,text,'imageUrl':image{asset},slug{current}}`)
     return { rawGame }
   },
   computed: {
