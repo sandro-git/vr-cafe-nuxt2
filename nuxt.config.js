@@ -29,8 +29,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // font-awesome
-    '@plugins/font-awesome',
-    '@plugins/preview.client'
+    '@plugins/font-awesome'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -44,9 +43,8 @@ export default {
     '@nuxtjs/tailwindcss',
     // sanity module
     '@nuxtjs/sanity/module',
-    // @nuxt/image
+    // nuxt-image
     '@nuxt/image'
-    // ngrok
   ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
