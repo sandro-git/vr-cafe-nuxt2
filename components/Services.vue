@@ -400,17 +400,6 @@
 
 <script>
 export default {
-  name: 'BaseServices',
-  props: {
-    pages: {
-      type: Object,
-      default: null
-    }
-  },
-  computed: {
-    services () {
-      return this.pages.result.find(el => el.name === 'Services')
-    }
-  }
+  name: 'BaseServices'
 }
 </script>
