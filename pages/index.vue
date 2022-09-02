@@ -12,7 +12,7 @@
     <Titles subtitle="SYNTHESYS" />
     <Card :games="Synthesys" />
     <Titles subtitle="PARTENAIRES" />
-    <Card :games="getEditors" :editor="false" />
+    <EditorCard :editors="getEditors" />
   </div>
 </template>
 
