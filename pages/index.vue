@@ -11,6 +11,8 @@
     <Card :games="Wanadev" />
     <Titles subtitle="SYNTHESYS" />
     <Card :games="Synthesys" />
+    <Titles subtitle="LDLC VR STUDIO" />
+    <Card :games="Ldlc" />
     <Titles subtitle="PARTENAIRES" />
     <EditorCard :editors="getEditors" />
   </div>
@@ -33,6 +35,9 @@ export default {
     },
     Synthesys () {
       return this.getGames.filter(el => el.editor.name === 'Synthesys')
+    },
+    Ldlc () {
+      return this.getGames.filter(el => el.editor.name === 'LDLC Studio VR')
     }
   }
 
