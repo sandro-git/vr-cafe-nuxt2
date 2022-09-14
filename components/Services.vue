@@ -116,13 +116,13 @@
                     </ul>
                     <div class="mt-8">
                       <div class="rounded-lg shadow-md">
-                        <a
-                          href="#"
+                        <nuxt-link
+                          to="#contact"
                           class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-indigo-700 hover:bg-gray-50"
                           aria-describedby="tier-hobby"
                         >
                           Nous contacter
-                        </a>
+                        </nuxt-link>
                       </div>
                     </div>
                   </div>
@@ -271,13 +271,13 @@
                   </ul>
                   <div class="mt-10">
                     <div class="rounded-lg shadow-md">
-                      <a
-                        href="#footer"
+                      <nuxt-link
+                        to="#contact"
                         class="block w-full text-center rounded-lg border border-transparent bg-indigo-700 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-indigo-700"
                         aria-describedby="tier-growth"
                       >
                         Nous Contacter
-                      </a>
+                      </nuxt-link>
                     </div>
                   </div>
                 </div>
@@ -378,13 +378,13 @@
                     </ul>
                     <div class="mt-8">
                       <div class="rounded-lg shadow-md">
-                        <a
-                          href="reservation-simply.html"
+                        <nuxt-link
+                          to="#contact"
                           class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-indigo-700 hover:bg-gray-50"
                           aria-describedby="tier-scale"
                         >
-                          Réserver
-                        </a>
+                          Nous Contacter
+                        </nuxt-link>
                       </div>
                     </div>
                   </div>

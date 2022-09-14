@@ -15,13 +15,17 @@
     <Card :games="Ldlc" />
     <Titles subtitle="PARTENAIRES" />
     <EditorCard :editors="getEditors" />
+    <Titles subtitle="CONTACT" />
+    <ContactSection />
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import ContactSection from '~/components/ContactSection.vue'
 export default {
   name: 'IndexPage',
+  components: { ContactSection },
   computed: {
     ...mapGetters(['getGames', 'getEditors']),
     Ubisoft () {
