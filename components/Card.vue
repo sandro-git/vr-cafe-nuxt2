@@ -12,6 +12,7 @@
             width="342"
             height="208"
             :alt="game.name"
+            aria-id=""
           />
           <div class="p-5">
             <p class="text-2xl text-center mb-5 text-gray-50">
