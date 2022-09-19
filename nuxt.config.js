@@ -14,7 +14,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'La page web de la plus grande salle de réalité virtuelle des pyrénée-orientales. Vous pouvez retouvez tout nos Jeux. Et surtout réserver votre session.' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
