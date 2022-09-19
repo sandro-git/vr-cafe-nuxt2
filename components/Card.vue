@@ -5,7 +5,7 @@
         <div>
           <nuxt-img
             provider="sanity"
-            :src="game.imageUrl.asset._ref"
+            :src="game.imageUrl.asset._ref+'?h=200&'"
             placeholder
             class="h-52 w-full"
             quality="100"
