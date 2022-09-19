@@ -3,9 +3,11 @@
     <nuxt-img
       provider="sanity"
       class="text-center"
-      :src="LandingImage.imageId.asset._ref"
-      alt="VR headset"
+      :src="LandingImage.imageId.asset._ref+'?h=683&'"
+      alt="image from the inside of VR Café"
       sizes="xs:100vw lg:100vw xl:100vw"
+      width="1024"
+      height="683"
     />
   </div>
 </template>

@@ -3,10 +3,12 @@
     <span class="sr-only">Logo</span>
     <nuxt-img
       provider="sanity"
-      :src="Logo.imageId.asset._ref"
+      :src="Logo.imageId.asset._ref+'?h=208&'"
       alt="logo vr café"
       class="h-full"
       sizes="xs:100vw"
+      width="320"
+      height="205"
     />
   </nuxt-link>
 </template>

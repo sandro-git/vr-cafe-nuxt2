@@ -5,12 +5,13 @@
         <div>
           <nuxt-img
             provider="sanity"
-            :src="game.imageUrl.asset._ref+'?h=200&'"
+            :src="game.imageUrl.asset._ref+'?h=208&'"
             placeholder
             class="h-52 w-full"
             quality="100"
             width="342"
             height="208"
+            :alt="game.name"
           />
           <div class="p-5">
             <p class="text-2xl text-center mb-5 text-gray-50">

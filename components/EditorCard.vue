@@ -5,9 +5,13 @@
         <div>
           <nuxt-img
             provider="sanity"
-            :src="editor.imageUrl.asset._ref"
+            :src="editor.imageUrl.asset._ref+'?h=208&'"
             placeholder
             class="h-52 w-full"
+            quality="100"
+            width="342"
+            height="208"
+            :alt="editor.name"
           />
         </div>
       </a>
