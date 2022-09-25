@@ -1,8 +1,15 @@
+/* eslint-disable no-console */
+import { groq } from '@nuxtjs/sanity'
+const gamesQuery = groq`{ "games": *[_type == "game"]{name,text,"imageUrl": image{asset},editor->{name},slug{current},youtube,players,difficulty} }`
+const pagesQuery = groq`{ "pages": *[_type == "Pages"]{name,"imageId":image{asset},titre,text} }`
+const editorsQuery = groq`{ "editors": *[_type == "editors"]{name,"imageUrl":image{asset},_id,link} }`
+const servicesQuery = groq`{ "editors": *[_type == "services"]{name,"imageUrl":image{asset},_id,slug} }`
+
 export const state = () => ({
-  games: [],
-  pages: [],
-  editors: [],
-  services: []
+  pages: null,
+  editors: null,
+  services: null,
+  games: null
 })
 
 export const getters = {
@@ -36,19 +43,16 @@ export const mutations = {
 }
 
 export const actions = {
-  async nuxtServerInit ({ dispatch }, { $axios }) {
-    const games = await $axios.$get('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "game"]{name,text,"imageUrl": image{asset},editor->{name},slug{current},youtube,players,difficulty}')
+  async nuxtServerInit ({ dispatch }, { $axios, $sanity }) {
+    const games = await $sanity.fetch(gamesQuery)
+    const pages = await $sanity.fetch(pagesQuery)
+    const editors = await $sanity.fetch(editorsQuery)
+    const services = await $sanity.fetch(servicesQuery)
 
-    const pages = await $axios.$get('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "Pages"]{name,"imageId":image{asset},titre,text}')
-
-    const editors = await $axios.$get('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "editors"]{name,"imageUrl":image{asset},_id,link}')
-
-    const services = await $axios.$get('https://byaeh17d.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "services"]{name,"imageUrl":image{asset},_id,slug}')
-
-    await dispatch('setGames', games.result)
-    await dispatch('setPages', pages.result)
-    await dispatch('setEditors', editors.result)
-    await dispatch('setServices', services.result)
+    await dispatch('setGames', games.games)
+    await dispatch('setPages', pages.pages)
+    await dispatch('setEditors', editors.editors)
+    await dispatch('setServices', services.services)
   },
   setGames ({ commit }, games) {
     commit('SET_GAMES', games)

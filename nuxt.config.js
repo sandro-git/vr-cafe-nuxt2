@@ -44,10 +44,10 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    // sanity module
-    '@nuxtjs/sanity/module',
     // nuxt-image
-    '@nuxt/image'
+    '@nuxt/image',
+    // nuxt-sanity
+    '@nuxtjs/sanity/module'
   ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -64,14 +64,17 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-  sanity: {
-    projectId: 'byaeh17d',
-    minimal: true
-  },
+  // sanity: {
+  //   projectId: 'byaeh17d',
+  //   minimal: true
+  // },
   tailwindcss: {},
   image: {
     sanity: {
       projectId: 'byaeh17d'
     }
+  },
+  sanity: {
+    projectId: 'byaeh17d'
   }
 }

@@ -1368,7 +1368,7 @@
 
 "@nuxt/kit@0.6.4":
   version "0.6.4"
-  resolved "https://registry.npmjs.org/@nuxt/kit/-/kit-0.6.4.tgz"
+  resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-0.6.4.tgz#76a81e135bfeb91c0b5eb58435c8e5640046c912"
   integrity sha512-NsV8TEVN+oTOgJvrsaIuyMaq/mFW+O7Rnz+sGUMlJlUskBC0KyqkrLkclNFyXsrnf4MEudAV+1WwtOyFVODltw==
   dependencies:
     consola "^2.15.3"
@@ -1651,7 +1651,7 @@
 
 "@nuxtjs/sanity@0.10.0":
   version "0.10.0"
-  resolved "https://registry.npmjs.org/@nuxtjs/sanity/-/sanity-0.10.0.tgz"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/sanity/-/sanity-0.10.0.tgz#5fe7df1fdd5c174dd1c35f2f387481b773989467"
   integrity sha512-/vXxsKTel4YyhMFFcfVp6GiWXJ261b4j0LyfiZcOw5k+t5JLVNjWgAzCfhfpE+4ubi5xO04iaS90ERyZYRMuCA==
   dependencies:
     "@nuxt/kit" "0.6.4"
@@ -3706,7 +3706,7 @@ defined@^1.0.0:
 
 defu@5.0.0:
   version "5.0.0"
-  resolved "https://registry.npmjs.org/defu/-/defu-5.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/defu/-/defu-5.0.0.tgz#5768f0d402a555bfc4c267246b20f82ce8b5a10b"
   integrity sha512-VHg73EDeRXlu7oYWRmmrNp/nl7QkdXUxkQQKig0Zk8daNmm84AbGoC8Be6/VVLJEKxn12hR0UBmz8O+xQiAPKQ==
 
 defu@^3.2.2:
@@ -3906,7 +3906,7 @@ dot-prop@^5.2.0:
 
 dotenv@^10.0.0:
   version "10.0.0"
-  resolved "https://registry.npmjs.org/dotenv/-/dotenv-10.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
   integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
 
 dotenv@^16.0.1:
@@ -5805,7 +5805,12 @@ jest-worker@^27.5.1:
     merge-stream "^2.0.0"
     supports-color "^8.0.0"
 
-jiti@^1.10.1, jiti@^1.14.0, jiti@^1.9.2:
+jiti@^1.10.1:
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.16.0.tgz#f72065954446ad1866fa8d6bcc3bed3cc1cebdaa"
+  integrity sha512-L3BJStEf5NAqNuzrpfbN71dp43mYIcBUlCRea/vdyv5dW/AYa1d4bpelko4SHdY3I6eN9Wzyasxirj1/vv5kmg==
+
+jiti@^1.14.0, jiti@^1.9.2:
   version "1.14.0"
   resolved "https://registry.npmjs.org/jiti/-/jiti-1.14.0.tgz"
   integrity sha512-4IwstlaKQc9vCTC+qUXLM1hajy2ImiL9KnLvVYiaHOtS/v3wRjhLlGl121AmgDgx/O43uKmxownJghS5XMya2A==
@@ -9701,7 +9706,7 @@ unbox-primitive@^1.0.2:
 
 unctx@^0.0.3:
   version "0.0.3"
-  resolved "https://registry.npmjs.org/unctx/-/unctx-0.0.3.tgz"
+  resolved "https://registry.yarnpkg.com/unctx/-/unctx-0.0.3.tgz#e06f67d5bebe2babe5a57c1dc13d77255e3458c0"
   integrity sha512-x+NCoXiYn93laQNnoJGZx2UZj7vv8ViFKadUCDx9S4QoPIkGRCYT0OLUDEMlg/B+Q6bnqdSkPLmiy/kjNIwVyQ==
 
 unctx@^2.0.1:
@@ -9837,7 +9842,7 @@ unset-value@^1.0.0:
 
 untyped@^0.2.5:
   version "0.2.13"
-  resolved "https://registry.npmjs.org/untyped/-/untyped-0.2.13.tgz"
+  resolved "https://registry.yarnpkg.com/untyped/-/untyped-0.2.13.tgz#31be48c9cf1d81b65d05f762a0332b2b5e9a9cb3"
   integrity sha512-dnvCmDKTb+zg504JyQ9h1sWINAyxnP6KgmvUH6s6BjLV+3fvjZTiUklL15VvEqpDjy4Leq/xzlZ+JxskeoM5mg==
 
 untyped@^0.4.5:

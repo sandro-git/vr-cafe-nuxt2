@@ -1,18 +1,20 @@
 <template>
-  <div class="grid grid-cols-1 grid-row-3 place-self-auto xl:grid-cols-4 gap-4 items-center p-10  ">
-    <div v-for="game in games" :key="game._id" class="flex flex-col items-center h-full w-full  rounded-xl ">
-      <nuxt-link :to="game.slug.current" class="max-w-sm overflow-hidden rounded-xl shadow-md duration-200 hover:scale-105 hover:shadow-xl w-full h-full border-2 border-pink-500">
+  <div class="grid grid-cols-1 grid-row-3 place-self-auto xl:grid-cols-3 gap-4 items-center p-10  ">
+    <div v-for="game in games" :key="game._id" class="flex flex-col items-center h-full rounded-xl ">
+      <nuxt-link :to="game.slug.current" class="max-w-sm overflow-hidden rounded-xl shadow-md duration-200 hover:scale-105 hover:shadow-xl h-full border-2 border-pink-500">
         <div>
-          <nuxt-img
-            provider="sanity"
-            :src="game.imageUrl.asset._ref+'?h=208&'"
-            placeholder
-            class="h-52 w-full"
-            quality="100"
-            width="342"
-            height="208"
-            :alt="game.name"
-          />
+          <div class="h-52 w-[370px] overflow-hidden">
+            <nuxt-img
+              provider="sanity"
+              :src="game.imageUrl.asset._ref+'?h=208&'"
+              placeholder
+              quality="100"
+              width="370"
+              height="208"
+              :alt="game.name"
+              loading="lazy"
+            />
+          </div>
           <div class="p-5">
             <p class="text-2xl text-center mb-5 text-gray-50">
               {{ game.name }}

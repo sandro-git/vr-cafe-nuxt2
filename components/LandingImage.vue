@@ -6,8 +6,8 @@
       :src="LandingImage.imageId.asset._ref+'?h=683&'"
       alt="image from the inside of VR Café"
       sizes="xs:100vw lg:100vw xl:100vw"
-      width="1024"
-      height="683"
+      width="2048"
+      height="1366"
     />
   </div>
 </template>
