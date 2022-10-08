@@ -22,4 +22,7 @@
     ".nuxt",
     "dist"
   ],
+  "vueCompilerOptions": {
+    "target": 2.7
+  }
 }
