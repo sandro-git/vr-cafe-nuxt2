@@ -19,6 +19,9 @@
         <p class="mt-8">
           {{ game.text }}
         </p>
+        <button class="w-1/2 mx-auto inline-block bg-white mt-8 py-2 px-4 border border-transparent rounded-md text-base lg:text-2xl font-medium text-indigo-700 hover:bg-indigo-50" @click="goBack">
+          Retour
+        </button>
       </div>
     </div>
   </div>
@@ -34,6 +37,11 @@ export default {
     },
     game () {
       return this.getGames.find(el => el.slug.current === this.routeSlug)
+    }
+  },
+  methods: {
+    goBack () {
+      this.$router.go(-1)
     }
   }
 }
