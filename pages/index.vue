@@ -9,10 +9,10 @@
     <Card :games="Arvi" />
     <Titles :id="'arcade'" class="scroll-mt-40" title="ARCADE VR" subtitle="WANADEV" />
     <Card :games="Wanadev" />
-    <Titles subtitle="SYNTHESYS" />
-    <Card :games="Synthesys" />
     <Titles subtitle="LDLC VR STUDIO" />
     <Card :games="Ldlc" />
+    <Titles subtitle="SYNTHESYS" />
+    <Card :games="Synthesys" />
     <Titles subtitle="PARTENAIRES" />
     <EditorCard :editors="getEditors" />
     <Titles subtitle="CONTACT" />
