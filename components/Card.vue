@@ -3,16 +3,18 @@
     <div v-for="game in games" :key="game._id" class="flex flex-col items-center h-full rounded-xl ">
       <nuxt-link :to="game.slug.current" class="max-w-sm overflow-hidden rounded-xl shadow-md duration-200 hover:scale-105 hover:shadow-xl h-full border-2 border-pink-500">
         <div>
-          <div v-if="game.imageUrl" class="h-52 w-[370px] overflow-hidden">
+          <div v-if="game.imageUrl" class="h-96 overflow-hidden">
             <nuxt-img
               provider="sanity"
-              :src="game.imageUrl.asset._ref+'?h=208&'"
+              :src="game.imageUrl.asset._ref"
               placeholder
-              quality="100"
-              width="370"
-              height="208"
+              fit="inside"
+              quality="80"
+              height="384"
+              width="380"
               :alt="game.name"
               loading="lazy"
+              sizes="sm:100vw md:50vw lg:25vw"
             />
           </div>
           <div class="p-5">
