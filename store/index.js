@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { groq } from '@nuxtjs/sanity'
-const gamesQuery = groq`{ "games": *[_type == "game"]{name,text,"imageUrl": image{asset},editor->{name},slug{current},youtube,players,difficulty} }`
+const gamesQuery = groq`{ "games": *[_type == "game"]{name,text,"imageUrl": image{asset},editor->{name},slug{current},youtube,players,difficulty,type,Multijoueur} }`
 const pagesQuery = groq`{ "pages": *[_type == "Pages"]{name,"imageId":image{asset},titre,text} }`
 const editorsQuery = groq`{ "editors": *[_type == "editors"]{name,"imageUrl":image{asset},_id,link} }`
 const servicesQuery = groq`{ "editors": *[_type == "services"]{name,"imageUrl":image{asset},_id,slug} }`
