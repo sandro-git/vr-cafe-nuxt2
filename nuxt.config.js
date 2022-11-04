@@ -54,7 +54,8 @@ export default {
     // nuxt-image
     '@nuxt/image',
     // nuxt-sanity
-    '@nuxtjs/sanity/module'
+    '@nuxtjs/sanity/module',
+    '@nuxtjs/google-analytics'
   ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -83,5 +84,14 @@ export default {
   },
   sanity: {
     projectId: 'byaeh17d'
+  },
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID
+    // Use as fallback if no runtime config is provided
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID
+    }
   }
 }
