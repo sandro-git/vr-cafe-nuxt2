@@ -7,10 +7,14 @@
     <Card :games="Ubisoft" />
     <Titles title="ESCAPE GAME VR (EXCLU)" subtitle="ARVI VR" />
     <Card :games="Arvi" />
+    <Titles subtitle="DELUSION STUDIO" />
+    <Card :games="Delusion" />
     <Titles :id="'arcade'" class="scroll-mt-40" title="ARCADE VR" subtitle="WANADEV" />
     <Card :games="Wanadev" />
     <Titles subtitle="LDLC VR STUDIO" />
     <Card :games="Ldlc" />
+    <Titles subtitle="LA SUITE STUDIO" />
+    <Card :games="LaSuiteStudio" />
     <Titles subtitle="SYNTHESYS" />
     <Card :games="Synthesys" />
     <Titles subtitle="PARTENAIRES" />
@@ -42,6 +46,12 @@ export default {
     },
     Ldlc () {
       return this.getGames.filter(el => el.editor.name === 'LDLC Studio VR')
+    },
+    Delusion () {
+      return this.getGames.filter(el => el.editor.name === 'Delusion Studio')
+    },
+    LaSuiteStudio () {
+      return this.getGames.filter(el => el.editor.name === 'La Suite Studio')
     }
   }
 
