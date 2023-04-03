@@ -13,8 +13,6 @@
     <Card :games="Wanadev" />
     <Titles subtitle="LDLC VR STUDIO" />
     <Card :games="Ldlc" />
-    <Titles subtitle="LA SUITE STUDIO" />
-    <Card :games="LaSuiteStudio" />
     <Titles subtitle="SYNTHESYS" />
     <Card :games="Synthesys" />
     <Titles subtitle="PARTENAIRES" />
