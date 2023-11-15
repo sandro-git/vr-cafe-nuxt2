@@ -1,11 +1,11 @@
 <template>
   <header class="bg-gray-900 lg:h-40 w-full z-20 sticky top-0">
     <nav
-      class="lg:max-h-40 max-h-20 w-full py-4 lg:py-6 grid grid-cols-2 grid-rows-1 lg:grid-cols-3 items-center justify-between lg:border-none bg-gray-900"
+      class="lg:max-h-40 max-h-20 w-full py-4 lg:py-4 grid grid-cols-2 grid-rows-1 lg:grid-cols-3 items-center justify-between lg:border-none bg-gray-900"
       aria-label="Top"
     >
       <!-- logo -->
-      <nuxt-link to="/" class="flex justify-center lg:col-span-1 h-full">
+      <nuxt-link to="/" class="flex justify-center lg:col-span-1 h-2/3">
         <span class="sr-only">Logo</span>
         <nuxt-img
           provider="sanity"
@@ -114,10 +114,6 @@ export default {
         {
           texte: 'Arcade',
           lien: '/#arcade'
-        },
-        {
-          texte: 'Contact',
-          lien: '/#contact'
         }
       ]
     }

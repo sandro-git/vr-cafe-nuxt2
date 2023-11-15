@@ -1,7 +1,7 @@
 <template>
   <div class="grid grid-cols-1 grid-row-3 place-self-auto xl:grid-cols-3 gap-4 items-center p-10  ">
     <div v-for="game in games" :key="game._id" class="flex flex-col items-center h-full rounded-xl ">
-      <nuxt-link :to="game.slug.current" class="max-w-sm overflow-hidden rounded-xl shadow-md duration-200 hover:scale-105 hover:shadow-xl h-full border-2 border-pink-500">
+      <nuxt-link :to="game.slug.current" class="max-w-sm overflow-hidden rounded-xl shadow-md duration-200 hover:scale-105 hover:shadow-xl h-full bg-gray-800">
         <div class="flex flex-col justify-between">
           <div v-if="game.imageUrl" class="h-80 overflow-hidden">
             <nuxt-img
