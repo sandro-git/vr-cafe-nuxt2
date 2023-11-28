@@ -3,11 +3,21 @@
     <LandingImage />
     <Tarif />
     <Services />
-    <Titles :id="'escape'" class="scroll-mt-40" title="ESCAPE GAME VR" subtitle="UBISOFT" />
+    <Titles
+      :id="'escape'"
+      class="scroll-mt-40"
+      title="ESCAPE GAME VR"
+      subtitle="UBISOFT"
+    />
     <Card :games="Ubisoft" />
     <Titles title="ESCAPE GAME VR (EXCLU)" subtitle="ARVI VR" />
     <Card :games="Arvi" />
-    <Titles :id="'arcade'" class="scroll-mt-40" title="ARCADE VR" subtitle="WANADEV" />
+    <Titles
+      :id="'arcade'"
+      class="scroll-mt-40"
+      title="ARCADE VR"
+      subtitle="WANADEV"
+    />
     <Card :games="Wanadev" />
     <Titles subtitle="LDLC VR STUDIO" />
     <Card :games="Ldlc" />
@@ -21,35 +31,37 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import ContactSection from '~/components/ContactSection.vue'
+import { mapGetters } from "vuex";
+import ContactSection from "~/components/ContactSection.vue";
+
+this.$fb.enable();
+
 export default {
-  name: 'IndexPage',
+  name: "IndexPage",
   components: { ContactSection },
   computed: {
-    ...mapGetters(['getGames', 'getEditors']),
-    Ubisoft () {
-      return this.getGames.filter(el => el.editor.name === 'Ubisoft')
+    ...mapGetters(["getGames", "getEditors"]),
+    Ubisoft() {
+      return this.getGames.filter((el) => el.editor.name === "Ubisoft");
     },
-    Arvi () {
-      return this.getGames.filter(el => el.editor.name === 'Arvi')
+    Arvi() {
+      return this.getGames.filter((el) => el.editor.name === "Arvi");
     },
-    Wanadev () {
-      return this.getGames.filter(el => el.editor.name === 'Wanadev')
+    Wanadev() {
+      return this.getGames.filter((el) => el.editor.name === "Wanadev");
     },
-    Synthesys () {
-      return this.getGames.filter(el => el.editor.name === 'Synthesys')
+    Synthesys() {
+      return this.getGames.filter((el) => el.editor.name === "Synthesys");
     },
-    Ldlc () {
-      return this.getGames.filter(el => el.editor.name === 'LDLC Studio VR')
+    Ldlc() {
+      return this.getGames.filter((el) => el.editor.name === "LDLC Studio VR");
     },
-    Delusion () {
-      return this.getGames.filter(el => el.editor.name === 'Delusion Studio')
+    Delusion() {
+      return this.getGames.filter((el) => el.editor.name === "Delusion Studio");
     },
-    LaSuiteStudio () {
-      return this.getGames.filter(el => el.editor.name === 'La Suite Studio')
-    }
-  }
-
-}
+    LaSuiteStudio() {
+      return this.getGames.filter((el) => el.editor.name === "La Suite Studio");
+    },
+  },
+};
 </script>

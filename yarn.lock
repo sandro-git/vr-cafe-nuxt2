@@ -6813,6 +6813,13 @@ num2fraction@^1.2.2:
   resolved "https://registry.npmjs.org/num2fraction/-/num2fraction-1.2.2.tgz"
   integrity sha512-Y1wZESM7VUThYY+4W+X4ySH2maqcA+p7UR+w8VWNWVAd6lwuXXWz/w/Cz43J/dI2I+PS6wD5N+bJUF+gjWvIqg==
 
+nuxt-facebook-pixel-module@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/nuxt-facebook-pixel-module/-/nuxt-facebook-pixel-module-1.6.0.tgz#bee3417a7a965638a216038b5216f57700cf522c"
+  integrity sha512-+9JGTzf6aXp5sIAsW/oPSP/HTZR0a+2FpFHYGFjvOrwp81mx7i10mt3C1XPcHakUH48kHEQSkB8PH4MD7SPLvQ==
+  dependencies:
+    minimatch "^3.0.4"
+
 nuxt@^2.15.8:
   version "2.15.8"
   resolved "https://registry.npmjs.org/nuxt/-/nuxt-2.15.8.tgz"
