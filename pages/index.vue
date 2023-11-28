@@ -34,8 +34,6 @@
 import { mapGetters } from "vuex";
 import ContactSection from "~/components/ContactSection.vue";
 
-this.$fb.enable();
-
 export default {
   name: "IndexPage",
   components: { ContactSection },
