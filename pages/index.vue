@@ -19,6 +19,8 @@
       subtitle="WANADEV"
     />
     <Card :games="Wanadev" />
+    <Titles subtitle="ARVI" />
+    <Card :games="ArviArcade" />
     <Titles subtitle="LDLC VR STUDIO" />
     <Card :games="Ldlc" />
     <Titles subtitle="SYNTHESYS" />
@@ -31,35 +33,35 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import ContactSection from "~/components/ContactSection.vue";
+import { mapGetters } from 'vuex'
+import ContactSection from '~/components/ContactSection.vue'
 
 export default {
-  name: "IndexPage",
+  name: 'IndexPage',
   components: { ContactSection },
   computed: {
-    ...mapGetters(["getGames", "getEditors"]),
-    Ubisoft() {
-      return this.getGames.filter((el) => el.editor.name === "Ubisoft");
+    ...mapGetters(['getGames', 'getEditors']),
+    Ubisoft () {
+      return this.getGames.filter(el => el.editor.name === 'Ubisoft')
     },
-    Arvi() {
-      return this.getGames.filter((el) => el.editor.name === "Arvi");
+    Arvi () {
+      return this.getGames.filter(el => el.editor.name === 'Arvi')
     },
-    Wanadev() {
-      return this.getGames.filter((el) => el.editor.name === "Wanadev");
+    Wanadev () {
+      return this.getGames.filter(el => el.editor.name === 'Wanadev')
     },
-    Synthesys() {
-      return this.getGames.filter((el) => el.editor.name === "Synthesys");
+    Synthesys () {
+      return this.getGames.filter(el => el.editor.name === 'Synthesys')
     },
-    Ldlc() {
-      return this.getGames.filter((el) => el.editor.name === "LDLC Studio VR");
+    Ldlc () {
+      return this.getGames.filter(el => el.editor.name === 'LDLC Studio VR')
     },
-    Delusion() {
-      return this.getGames.filter((el) => el.editor.name === "Delusion Studio");
+    Delusion () {
+      return this.getGames.filter(el => el.editor.name === 'Delusion Studio')
     },
-    LaSuiteStudio() {
-      return this.getGames.filter((el) => el.editor.name === "La Suite Studio");
-    },
-  },
-};
+    LaSuiteStudio () {
+      return this.getGames.filter(el => el.editor.name === 'La Suite Studio')
+    }
+  }
+}
 </script>
