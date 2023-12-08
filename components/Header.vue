@@ -1,11 +1,11 @@
 <template>
-  <header class="bg-gray-900 lg:h-40 w-full z-20 sticky top-0">
+  <header class="bg-gray-900 pt-4 w-full z-20 sticky top-0">
     <nav
       class="lg:max-h-40 max-h-20 w-full py-4 lg:py-4 grid grid-cols-2 grid-rows-1 lg:grid-cols-3 items-center justify-between lg:border-none bg-gray-900"
       aria-label="Top"
     >
       <!-- logo -->
-      <nuxt-link to="/" class="flex justify-center lg:col-span-1 h-2/3">
+      <nuxt-link to="/" class="flex justify-center lg:col-span-1 h-16">
         <span class="sr-only">Logo</span>
         <nuxt-img
           provider="sanity"
@@ -13,6 +13,8 @@
           alt="logo vr café"
           class="h-full"
           sizes="xs:100vw"
+          width="100"
+          height="64"
         />
       </nuxt-link>
       <div class="text-right pr-8 lg:hidden flex justify-end " @click="toggle">
@@ -30,7 +32,7 @@
       <div
         class="hidden col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-1 lg:flex flex-row gap-4 items-center"
       >
-        <div v-for="lien in liens" :key="lien.texte" class="mb-4 py-4 flex space-x-6">
+        <div v-for="lien in liens" :key="lien.texte" class="flex space-x-6">
           <a
             key="Index"
             :href="lien.lien"
