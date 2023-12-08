@@ -1,7 +1,10 @@
 <template>
-  <div id="contact" class="bg-gray-900 flex flex-col justify-center mt-12">
+  <div
+    id="contact"
+    class="bg-gray-900 flex flex-col sm:flex-row justify-center sm:justify-evenly mt-12"
+  >
     <div class="text-center">
-      <h3 class="text-xl  font-medium leading-6 text-gray-50">
+      <h3 class="text-xl font-medium leading-6 text-gray-50">
         Adresse
       </h3>
       <dl class="mt-2 text-lg text-gray-200">
@@ -10,7 +13,8 @@
             Adresse
           </dt>
           <a
-            href="https://www.google.com/maps/place/VR+Caf%C3%A9+PERPIGNAN+le+meilleur+de+la+r%C3%A9alite+virtuelle/@42.7070353,3.0186066,15z/data=!4m12!1m6!3m5!1s0x0:0x21ddaea797d553b8!2sVR+Caf%C3%A9+PERPIGNAN+le+meilleur+de+la+r%C3%A9alite+virtuelle!8m2!3d42.7070353!4d3.0186066!3m4!1s0x0:0x21ddaea797d553b8!8m2!3d42.7070353!4d3.0186066">
+            href="https://www.google.com/maps/place/VR+Caf%C3%A9+PERPIGNAN+le+meilleur+de+la+r%C3%A9alite+virtuelle/@42.7070353,3.0186066,15z/data=!4m12!1m6!3m5!1s0x0:0x21ddaea797d553b8!2sVR+Caf%C3%A9+PERPIGNAN+le+meilleur+de+la+r%C3%A9alite+virtuelle!8m2!3d42.7070353!4d3.0186066!3m4!1s0x0:0x21ddaea797d553b8!8m2!3d42.7070353!4d3.0186066"
+          >
             <dd>2 rue du pilou</dd>
           </a>
         </div>
@@ -19,13 +23,14 @@
             Code postal et ville
           </dt>
           <a
-            href="https://www.google.com/maps/place/VR+Caf%C3%A9+PERPIGNAN+le+meilleur+de+la+r%C3%A9alite+virtuelle/@42.7070353,3.0186066,15z/data=!4m12!1m6!3m5!1s0x0:0x21ddaea797d553b8!2sVR+Caf%C3%A9+PERPIGNAN+le+meilleur+de+la+r%C3%A9alite+virtuelle!8m2!3d42.7070353!4d3.0186066!3m4!1s0x0:0x21ddaea797d553b8!8m2!3d42.7070353!4d3.0186066">
+            href="https://www.google.com/maps/place/VR+Caf%C3%A9+PERPIGNAN+le+meilleur+de+la+r%C3%A9alite+virtuelle/@42.7070353,3.0186066,15z/data=!4m12!1m6!3m5!1s0x0:0x21ddaea797d553b8!2sVR+Caf%C3%A9+PERPIGNAN+le+meilleur+de+la+r%C3%A9alite+virtuelle!8m2!3d42.7070353!4d3.0186066!3m4!1s0x0:0x21ddaea797d553b8!8m2!3d42.7070353!4d3.0186066"
+          >
             <dd>66140 - Canet En roussillon</dd>
           </a>
         </div>
       </dl>
     </div>
-    <div class="text-center mt-8">
+    <div class="text-center mt-8 sm:mt-0">
       <h3 class="text-xl font-medium leading-6 text-gray-50">
         Sandro
       </h3>
@@ -48,7 +53,7 @@
         </div>
       </dl>
     </div>
-    <div class="text-center mt-8">
+    <div class="text-center mt-8 sm:mt-0">
       <h3 class="text-xl font-medium leading-6 text-gray-50">
         Contact
       </h3>
@@ -80,7 +85,3 @@ export default {
 
 }
 </script>
-
-<style>
-
-</style>

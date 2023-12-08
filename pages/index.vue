@@ -3,15 +3,16 @@
     <LandingImage />
     <Tarif />
     <Services />
+
     <Titles
       :id="'escape'"
+      title="ESCAPE GAME VR (EXCLU)"
+      subtitle="ARVI VR"
       class="scroll-mt-40"
-      title="ESCAPE GAME VR"
-      subtitle="UBISOFT"
     />
-    <Card :games="Ubisoft" />
-    <Titles title="ESCAPE GAME VR (EXCLU)" subtitle="ARVI VR" />
     <Card :games="Arvi" />
+    <Titles subtitle="UBISOFT" />
+    <Card :games="Ubisoft" />
     <Titles
       :id="'arcade'"
       class="scroll-mt-40"
@@ -19,12 +20,10 @@
       subtitle="WANADEV"
     />
     <Card :games="Wanadev" />
-    <Titles subtitle="ARVI" />
+    <Titles subtitle="ARVI arcade" />
     <Card :games="ArviArcade" />
     <Titles subtitle="LDLC VR STUDIO" />
     <Card :games="Ldlc" />
-    <Titles subtitle="SYNTHESYS" />
-    <Card :games="Synthesys" />
     <Titles subtitle="PARTENAIRES" />
     <EditorCard :editors="getEditors" />
     <Titles subtitle="CONTACT" />
@@ -45,7 +44,10 @@ export default {
       return this.getGames.filter(el => el.editor.name === 'Ubisoft')
     },
     Arvi () {
-      return this.getGames.filter(el => el.editor.name === 'Arvi')
+      return this.getGames.filter(el => el.editor.name === 'Arvi' && el.type === 'escape')
+    },
+    ArviArcade () {
+      return this.getGames.filter(el => el.editor.name === 'Arvi' && el.type === 'arcade')
     },
     Wanadev () {
       return this.getGames.filter(el => el.editor.name === 'Wanadev')

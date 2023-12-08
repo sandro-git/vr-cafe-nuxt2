@@ -76,7 +76,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios', 'nuxt-facebook-pixel-module'
+    '@nuxtjs/axios'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -97,11 +97,6 @@ export default {
       projectId: 'byaeh17d'
     }
   },
-  facebook: {
-    track: 'PageView',
-    pixelId: '1438530407007639',
-    disabled: false
-  },
   sanity: {
     projectId: 'byaeh17d',
     minimal: true
@@ -116,20 +111,3 @@ export default {
     }
   }
 }
-// <!-- Meta Pixel Code -->
-/* <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1438530407007639');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1438530407007639&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code --> */
