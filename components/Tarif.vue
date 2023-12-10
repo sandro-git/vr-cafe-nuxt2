@@ -44,11 +44,7 @@
                         <span
                           class="px-3 flex items-start text-6xl tracking-tight text-gray-900"
                         >
-                          <span
-                            class="self-center text-xl font-medium text-gray-500 pr-2"
-                          >
-                            A partir de :
-                          </span>
+
                           <span class="font-extrabold"> 18 </span>
                           <span class="mt-2 mr-2 text-4xl font-medium">
                             €
@@ -488,5 +484,3 @@ export default {
   name: 'BasePrices'
 }
 </script>
-
-<style></style>

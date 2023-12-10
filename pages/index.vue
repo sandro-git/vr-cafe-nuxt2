@@ -2,6 +2,7 @@
   <div>
     <LandingImage />
     <Tarif />
+    <TarifsSite />
     <Services />
 
     <Titles
