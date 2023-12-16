@@ -1,7 +1,7 @@
 <template>
   <div>
     <LandingImage />
-    <TarifsSite />
+    <TarifS />
     <Services />
 
     <Titles
